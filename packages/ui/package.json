@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "racve",
+  "name": "vecui",
   "version": "0.0.1",
   "type": "module",
   "exports": {
