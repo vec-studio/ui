@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme.css'
+import { themeVars } from '../../../ui/src/theme.css'
 
 export const cardClassName = style({
   border: `1px solid rgb(245, 245, 245)`,

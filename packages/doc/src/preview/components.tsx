@@ -65,7 +65,7 @@ import {
   Tooltip,
   Tree,
   TreeItem
-} from '../components'
+} from '../../../ui/src/components'
 import { Card } from './card'
 import { componentsClassName } from './components.css'
 
