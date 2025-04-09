@@ -1,7 +1,6 @@
 {
   "private": true,
   "name": "doc",
-  "version": "0.0.1",
   "type": "module",
   "dependencies": {
     "@vanilla-extract/dynamic": "^2.1.2",
