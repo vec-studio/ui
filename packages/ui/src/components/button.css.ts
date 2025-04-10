@@ -1,4 +1,4 @@
-import { createVar, globalStyle, keyframes, style } from '@vanilla-extract/css'
+import { type ComplexStyleRule, createVar, globalStyle, keyframes, style } from '@vanilla-extract/css'
 import { semanticVars, themeVars } from '../theme.css'
 import { calendarClassName } from './calendar.css'
 import { comboBoxClassName } from './combo-box.css'
@@ -14,13 +14,13 @@ import { numberFieldClassName } from './number-field.css'
 import { groupClassName } from './group.css'
 import { treeClassName } from './tree.css'
 import { treeItemClassName, treeItemPaddingVar } from './tree-item.css'
-import { toolbarClassName } from './toolbar.css'
 import { textFieldClassName } from './text-field.css'
+import { recipe } from '@vanilla-extract/recipes'
 
 export const buttonHighlightHoverVar = createVar()
 export const buttonHighlightPressedVar = createVar()
 
-export const buttonClassName = style({
+const buttonStyleRule: ComplexStyleRule = {
   color: semanticVars.color.textColor,
   background: semanticVars.color.buttonBackground,
   border: `1px solid ${semanticVars.color.borderColor}`,
@@ -249,7 +249,41 @@ export const buttonClassName = style({
       fontSize: '1.5rem'
     }
   }
+}
+
+export const button = recipe({
+  base: buttonStyleRule,
+
+  variants: {
+    type: {
+      default: { background: themeVars.color.gray100 },
+      secondary: { background: themeVars.color.green20 },
+      tertiary: { background: themeVars.color.green10 },
+      danger: { background: themeVars.color.red60 }
+    },
+    size: {
+      small: {},
+      medium: {},
+      large: {}
+    },
+    state: {
+      default: {},
+      hover: {},
+      focus: {},
+      disable: {}
+    }
+  },
+
+  compoundVariants: [],
+
+  defaultVariants: {
+    type: 'default',
+    size: 'medium',
+    state: 'default'
+  }
 })
+
+export const buttonClassName = style(buttonStyleRule)
 
 export const toggleAnimation = keyframes({
   from: { opacity: 0 },
