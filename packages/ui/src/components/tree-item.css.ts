@@ -32,7 +32,7 @@ export const treeItemClassName = style({
       outlineOffset: '-2px'
     },
     [`${treeClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray100
+      background: themeVars.color.gray10
     },
     [`${treeClassName} &[data-selected]`]: {
       vars: {

@@ -52,7 +52,7 @@ export const modalClassName = style({
   borderRadius: '6px',
   background: semanticVars.color.overlayBackground,
   color: semanticVars.color.textColor,
-  border: `1px solid ${themeVars.color.gray400}`,
+  border: `1px solid ${themeVars.color.gray40}`,
   outline: 'none',
   maxWidth: '300px',
 

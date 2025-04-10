@@ -20,7 +20,7 @@ export const calendarCellClassName = style({
       display: 'none'
     },
     [`${calendarClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray100
+      background: themeVars.color.gray10
     },
     [`${calendarClassName} &[data-focus-visible]`]: {
       outline: `2px solid ${semanticVars.color.focusRingColor}`,
@@ -55,7 +55,7 @@ export const calendarCellClassName = style({
       display: 'none'
     },
     [`${rangeCalendarClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray100
+      background: themeVars.color.gray10
     },
     [`${rangeCalendarClassName} &[data-focus-visible]`]: {
       outline: `2px solid ${semanticVars.color.highlightBackground}`,

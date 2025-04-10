@@ -59,13 +59,13 @@ export const buttonClassName = style({
       lineHeight: '0.857rem',
       verticalAlign: 'middle',
       textAlign: 'center',
-      background: themeVars.color.gray500,
-      color: themeVars.color.gray100,
+      background: themeVars.color.gray50,
+      color: themeVars.color.gray10,
       border: 'none',
       padding: 0
     },
     [`${searchFieldClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray600
+      background: themeVars.color.gray60
     },
     // select
     [`${selectClassName} &`]: {

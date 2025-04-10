@@ -65,7 +65,7 @@ export const checkboxCheckboxClassName = style({
       background: checkboxSelectedColorPressedVar
     },
     [`${checkboxClassName}[data-invalid] &`]: {
-      [checkboxCheckmarkColorVar]: themeVars.color.gray100,
+      [checkboxCheckmarkColorVar]: themeVars.color.gray10,
       borderColor: semanticVars.color.invalidColor
     },
     [`${checkboxClassName}[data-invalid][data-pressed] &`]: {

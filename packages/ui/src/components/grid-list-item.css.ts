@@ -25,7 +25,7 @@ export const gridListItemClassName = style({
       outlineOffset: '-2px'
     },
     [`${gridListClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray100
+      background: themeVars.color.gray10
     },
     [`${gridListClassName} &[data-selected]`]: {
       vars: {

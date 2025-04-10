@@ -64,7 +64,7 @@ export const tableRowClassName = style({
       outlineOffset: '-2px'
     },
     '&[data-pressed]': {
-      background: themeVars.color.gray100
+      background: themeVars.color.gray10
     },
     '&[data-selected]': {
       vars: {
