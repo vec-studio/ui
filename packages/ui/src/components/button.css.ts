@@ -256,7 +256,13 @@ export const button = recipe({
 
   variants: {
     type: {
-      default: { background: themeVars.color.gray100 },
+      default: {
+        background: themeVars.color.gray100,
+        color: themeVars.color.gray10,
+        border: 'none',
+        borderRadius: '6px',
+        padding: '13px 16px'
+      },
       secondary: { background: themeVars.color.green20 },
       tertiary: { background: themeVars.color.green10 },
       danger: { background: themeVars.color.red60 }
