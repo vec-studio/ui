@@ -60,7 +60,7 @@ export const buttonClassName = style({
       verticalAlign: 'middle',
       textAlign: 'center',
       background: themeVars.color.gray500,
-      color: themeVars.color.gray50,
+      color: themeVars.color.gray100,
       border: 'none',
       padding: 0
     },

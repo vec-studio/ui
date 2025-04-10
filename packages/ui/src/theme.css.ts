@@ -3,13 +3,24 @@ import { createTheme, createThemeContract } from '@vanilla-extract/css'
 export const themeVars = createThemeContract({
   color: {
     backgroundColor: null,
+    blue100: null,
+    blue200: null,
+    blue300: null,
+    blue400: null,
+    blue500: null,
+    blue600: null,
     gray100: null,
     gray200: null,
     gray300: null,
     gray400: null,
-    gray50: null,
     gray500: null,
     gray600: null,
+    green100: null,
+    green200: null,
+    green300: null,
+    green400: null,
+    green500: null,
+    green600: null,
     highlightHover: null,
     highlightPressed: null,
     purple100: null,
@@ -27,16 +38,27 @@ export const themeVars = createThemeContract({
   }
 })
 
-export const themeLightClassName = createTheme(themeVars, {
+const themeLightTokens = {
   color: {
     backgroundColor: '#f8f8f8',
-    gray100: '#d0d0d0',
-    gray200: '#afafaf',
-    gray300: '#8f8f8f',
-    gray400: '#717171',
-    gray50: '#ffffff',
-    gray500: '#555555',
-    gray600: '#393939',
+    blue100: '#edf7ff',
+    blue200: '#ddecf8',
+    blue300: '#cce0f1',
+    blue400: '#93bcdc',
+    blue500: '#66a0cd',
+    blue600: '#2694d6',
+    gray100: '#f8f9f9',
+    gray200: '#e8eaec',
+    gray300: '#d8dcde',
+    gray400: '#b0b8be',
+    gray500: '#919ca5',
+    gray600: '#848f99',
+    green100: '#eef8f4',
+    green200: '#daeee6',
+    green300: '#cae3d9',
+    green400: '#94c1b0',
+    green500: '#4eab89',
+    green600: '#26a178',
     highlightHover: 'rgb(0 0 0 / 0.07)',
     highlightPressed: 'rgb(0 0 0 / 0.15)',
     purple100: '#d5c9fa',
@@ -45,41 +67,18 @@ export const themeLightClassName = createTheme(themeVars, {
     purple400: '#7a54ef',
     purple500: '#582ddc',
     purple600: '#3c1e95',
-    red100: '#f7c4ba',
-    red200: '#f29887',
-    red300: '#eb664d',
-    red400: '#de2300',
-    red500: '#a81b00',
-    red600: '#731200'
+    red100: '#fff1f1',
+    red200: '#ffd7d9',
+    red300: '#ffb3b8',
+    red400: '#ff8389',
+    red500: '#fa4d56',
+    red600: '#da1e28'
   }
-})
+}
 
-export const themeDarkClassName = createTheme(themeVars, {
-  color: {
-    backgroundColor: '#1d1d1d',
-    gray100: '#393939',
-    gray200: '#4f4f4f',
-    gray300: '#686868',
-    gray400: '#848484',
-    gray50: '#101010',
-    gray500: '#a7a7a7',
-    gray600: '#cfcfcf',
-    highlightHover: 'rgb(255 255 255 / 0.1)',
-    highlightPressed: 'rgb(255 255 255 / 0.2)',
-    purple100: '#3c1e95',
-    purple200: '#522acd',
-    purple300: '#6f46ed',
-    purple400: '#8e6ef1',
-    purple500: '#b099f5',
-    purple600: '#d5c8fa',
-    red100: '#721200',
-    red200: '#9c1900',
-    red300: '#cc2000',
-    red400: '#e95034',
-    red500: '#f08c79',
-    red600: '#f7c3ba'
-  }
-})
+export const themeLightClassName = createTheme(themeVars, themeLightTokens)
+
+export const themeDarkClassName = createTheme(themeVars, themeLightTokens)
 
 export const [semanticClassName, semanticVars] = createTheme({
   color: {
@@ -87,9 +86,9 @@ export const [semanticClassName, semanticVars] = createTheme({
     borderColorDisabled: themeVars.color.gray100,
     borderColorHover: themeVars.color.gray400,
     borderColorPressed: themeVars.color.gray400,
-    buttonBackground: themeVars.color.gray50,
+    buttonBackground: themeVars.color.gray100,
     buttonBackgroundPressed: themeVars.color.backgroundColor,
-    fieldBackground: themeVars.color.gray50,
+    fieldBackground: themeVars.color.gray100,
     fieldTextColor: themeVars.color.gray600,
     focusRingColor: themeVars.color.purple400,
     highlightBackground: '#6f46ed',
@@ -103,7 +102,7 @@ export const [semanticClassName, semanticVars] = createTheme({
     linkColor: themeVars.color.purple500,
     linkColorPressed: themeVars.color.purple600,
     linkColorSecondary: themeVars.color.gray500,
-    overlayBackground: themeVars.color.gray50,
+    overlayBackground: themeVars.color.gray100,
     textColor: themeVars.color.gray600,
     textColorBase: themeVars.color.gray500,
     textColorDisabled: themeVars.color.gray200,
