@@ -65,7 +65,7 @@ import {
   Tooltip,
   Tree,
   TreeItem
-} from '../../../ui/src/components'
+} from 'vecui'
 import { Card } from './card'
 import { componentsClassName } from './components.css'
 
