@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
 
-export const rootClassName = style({
+export const indexClassName = style({
   margin: '1rem'
 })

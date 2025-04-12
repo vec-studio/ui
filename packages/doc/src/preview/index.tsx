@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
 import { semanticClassName, themeLightClassName } from 'vecui'
 import { Components } from './components'
+import { indexClassName } from './index.css'
 
 export const Route = createFileRoute('/preview')({
   component() {
@@ -18,7 +19,7 @@ export const Route = createFileRoute('/preview')({
     }, [themeClassName])
 
     return (
-      <div className={rootClassName}>
+      <div className={indexClassName}>
         <Components />
       </div>
     )
