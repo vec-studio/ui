@@ -1,8 +1,4 @@
-import { globalStyle, style } from '@vanilla-extract/css'
-
-export const rootClassName = style({
-  margin: '1rem'
-})
+import { globalStyle } from '@vanilla-extract/css'
 
 globalStyle(`html`, {
   fontFamily: 'system-ui',

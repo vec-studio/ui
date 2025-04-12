@@ -2,11 +2,13 @@
 
 !.gitignore
 
+!public
 !src
 
 !README.md
 !index.html
 !package.json
+!routes.ts
 !tsconfig.json
 !vite.config.ts
 !wrangler.jsonc
