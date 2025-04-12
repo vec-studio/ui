@@ -1,16 +1,14 @@
 import { cloudflare } from '@cloudflare/vite-plugin'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 import reactPlugin from '@vitejs/plugin-react'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  server: {
-    host: '0.0.0.0',
-    port: 5173,
-    strictPort: true,
-    hmr: {
-      clientPort: 5173
+  plugins: [reactPlugin(), vanillaExtractPlugin(), cloudflare()],
+  resolve: {
+    alias: {
+      vecui: fileURLToPath(new URL('../ui/src', import.meta.url))
     }
-  },
-  plugins: [reactPlugin(), vanillaExtractPlugin(), cloudflare()]
+  }
 })
