@@ -8,7 +8,7 @@
 !README.md
 !index.html
 !package.json
-!routes.ts
 !tsconfig.json
+!tsr.config.json
 !vite.config.ts
 !wrangler.jsonc

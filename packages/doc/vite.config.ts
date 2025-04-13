@@ -6,17 +6,7 @@ import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  plugins: [
-    vanillaExtractPlugin(),
-    TanStackRouterVite({
-      autoCodeSplitting: true,
-      routesDirectory: './src',
-      target: 'react',
-      virtualRouteConfig: './routes.ts'
-    }),
-    reactPlugin(),
-    cloudflare()
-  ],
+  plugins: [vanillaExtractPlugin(), TanStackRouterVite(), reactPlugin(), cloudflare()],
   resolve: {
     alias: {
       vecui: fileURLToPath(new URL('../ui/src', import.meta.url))

@@ -17,6 +17,7 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.0.3",
     "@cloudflare/workers-types": "^4.20250409.0",
+    "@tanstack/router-cli": "^1.115.3",
     "@tanstack/router-plugin": "^1.115.3",
     "@tanstack/virtual-file-routes": "^1.115.0",
     "@types/react": "^19.0.12",
