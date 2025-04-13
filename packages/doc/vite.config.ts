@@ -7,15 +7,15 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
-    reactPlugin(),
     vanillaExtractPlugin(),
-    cloudflare(),
     TanStackRouterVite({
       autoCodeSplitting: true,
       routesDirectory: './src',
       target: 'react',
       virtualRouteConfig: './routes.ts'
-    })
+    }),
+    reactPlugin(),
+    cloudflare()
   ],
   resolve: {
     alias: {
