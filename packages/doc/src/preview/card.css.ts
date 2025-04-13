@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { themeVars } from '../../../ui/src/theme.css'
+import { themeVars } from 'vecui'
 
 export const cardClassName = style({
   border: `1px solid rgb(245, 245, 245)`,
