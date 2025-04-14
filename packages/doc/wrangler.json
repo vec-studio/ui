@@ -1,0 +1,7 @@
+{
+  "name": "vecui-doc",
+  "compatibility_date": "2025-04-01",
+  "env": {
+    "NODE_VERSION": "22.14.0"
+  }
+}

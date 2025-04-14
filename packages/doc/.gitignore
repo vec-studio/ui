@@ -1,0 +1,12 @@
+/*
+
+!.gitignore
+
+!public
+!src
+
+!README.md
+!astro.config.mjs
+!package.json
+!tsconfig.json
+!wrangler.json
