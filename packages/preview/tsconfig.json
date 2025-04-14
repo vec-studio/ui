@@ -9,7 +9,7 @@
     "moduleResolution": "bundler",
     "noEmit": true,
     "paths": {
-      "vecui": ["../ui/src/*"]
+      "vecui": ["../vecui/src/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

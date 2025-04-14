@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "doc",
+  "name": "preview",
   "type": "module",
   "dependencies": {
     "@tanstack/react-router": "^1.115.3",
