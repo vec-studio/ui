@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "preview",
+  "name": "doc",
   "type": "module",
   "scripts": {
     "start": "vite dev"
