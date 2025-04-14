@@ -11,4 +11,4 @@
 !tsconfig.json
 !tsr.config.json
 !vite.config.ts
-!wrangler.jsonc
+!wrangler.json
