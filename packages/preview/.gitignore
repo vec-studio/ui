@@ -2,7 +2,6 @@
 
 !.gitignore
 
-!public
 !src
 
 !README.md

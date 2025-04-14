@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [vanillaExtractPlugin(), TanStackRouterVite(), reactPlugin(), cloudflare()],
   resolve: {
     alias: {
+      src: fileURLToPath(new URL('./src', import.meta.url)),
       vecui: fileURLToPath(new URL('../vecui/src', import.meta.url))
     }
   }
