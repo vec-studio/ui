@@ -110,7 +110,7 @@ export const inputClassName = style({
     [`${numberFieldClassName} &${groupClassName} [data-focus-within] &`]: {
       outline: semanticVars.color.focusRingColor
     },
-    [`${numberFieldClassName} &`]: {
+    [`${numberFieldClassName} ${groupClassName} &`]: {
       background: semanticVars.color.fieldBackground,
       border: `1px solid ${semanticVars.color.borderColor}`,
       borderRadius: '0',
@@ -135,13 +135,13 @@ export const inputClassName = style({
     },
     // group
     [`${groupClassName} &`]: {
-      color: semanticVars.color.textColor,
       background: '0 0',
       border: 'none',
-      outline: 'none',
+      color: semanticVars.color.textColor,
+      fontSize: '1rem',
       margin: '0',
-      padding: '.286rem',
-      fontSize: '1rem'
+      outline: 'none',
+      padding: '.286rem'
     }
   }
 })

@@ -4,17 +4,9 @@ import { datePickerClassName } from './date-picker.css'
 import { dateRangePickerClassName } from './date-range-picker.css'
 import { numberFieldClassName } from './number-field.css'
 import { toolbarClassName } from './toolbar.css'
+import { textFieldClassName } from './text-field.css'
 
 export const groupClassName = style({
-  border: `1px solid ${semanticVars.color.borderColor}`,
-  background: semanticVars.color.fieldBackground,
-  borderRadius: '6px',
-  alignItems: 'center',
-  width: 'fit-content',
-  transition: 'all .2s',
-  display: 'flex',
-  overflow: 'hidden',
-
   selectors: {
     // date picker
     [`${datePickerClassName} &`]: {
@@ -48,12 +40,23 @@ export const groupClassName = style({
     },
     // number field
     [`${numberFieldClassName} &`]: {
+      borderRadius: '4px',
       display: 'flex',
-      width: 'fit-content',
-      borderRadius: '4px'
+      width: 'fit-content'
     },
     [`${numberFieldClassName} &[data-focus-within]`]: {
       outline: `1px solid ${semanticVars.color.focusRingColor}`
+    },
+    // text field
+    [`${textFieldClassName} &`]: {
+      alignItems: 'center',
+      background: semanticVars.color.fieldBackground,
+      border: `1px solid ${semanticVars.color.borderColor}`,
+      borderRadius: '6px',
+      display: 'flex',
+      overflow: 'hidden',
+      transition: 'all .2s',
+      width: 'fit-content'
     },
     // toolbar
     [`${toolbarClassName} &`]: {
