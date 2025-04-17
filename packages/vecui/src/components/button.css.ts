@@ -21,32 +21,24 @@ export const buttonHighlightHoverVar = createVar()
 export const buttonHighlightPressedVar = createVar()
 
 const buttonStyleRule: ComplexStyleRule = {
-  color: semanticVars.color.textColor,
-  background: semanticVars.color.buttonBackground,
-  border: `1px solid ${semanticVars.color.borderColor}`,
-  borderRadius: '4px',
-  appearance: 'none',
-  verticalAlign: 'middle',
+  border: 'none',
+  borderRadius: '6px',
+  boxSizing: 'border-box',
   fontSize: '1rem',
-  textAlign: 'center',
-  margin: 0,
   outline: 'none',
-  padding: '6px 10px',
-  textDecoration: 'none',
+  padding: '4px 12px',
+  textAlign: 'center',
+  verticalAlign: 'middle',
 
   selectors: {
-    '&[data-pressed]': {
-      boxShadow: 'inset 0 1px 2px rgb(0 0 0 / 0.1)',
-      background: semanticVars.color.buttonBackgroundPressed,
-      borderColor: semanticVars.color.borderColorPressed
-    },
     '&[data-focus-visible]': {
       outline: `2px solid ${semanticVars.color.focusRingColor}`,
       outlineOffset: '-1px'
     },
-    '&[data-disabled]': {
-      borderColor: semanticVars.color.borderColorDisabled,
-      color: semanticVars.color.textColorDisabled
+    '&[data-pressed]': {
+      boxShadow: 'inset 0 1px 2px rgb(0 0 0 / 0.1)',
+      background: semanticVars.color.buttonBackgroundPressed,
+      borderColor: semanticVars.color.borderColorPressed
     },
     // seach-field
     [`${searchFieldClassName} &`]: {
@@ -255,28 +247,97 @@ export const button = recipe({
   base: buttonStyleRule,
 
   variants: {
+    size: {
+      small: {
+        height: '2.285rem'
+      },
+      medium: {
+        height: '2.857rem'
+      },
+      large: {
+        height: '3.428rem'
+      }
+    },
     type: {
       default: {
         background: themeVars.color.gray100,
-        color: themeVars.color.gray10,
-        border: 'none',
-        borderRadius: '6px',
-        padding: '13px 16px'
+        color: '#ffffff',
+
+        selectors: {
+          '&[data-hovered]': {
+            background: themeVars.color.gray40,
+            color: '#ffffff'
+          },
+          '&[data-focused]': {
+            background: themeVars.color.gray20,
+            color: '#ffffff'
+          },
+          '&[data-disabled]': {
+            borderColor: themeVars.color.gray10,
+            color: themeVars.color.gray40
+          }
+        }
       },
-      secondary: { background: themeVars.color.green20 },
-      tertiary: { background: themeVars.color.green10 },
-      danger: { background: themeVars.color.red60 }
-    },
-    size: {
-      small: {},
-      medium: {},
-      large: {}
-    },
-    state: {
-      default: {},
-      hover: {},
-      focus: {},
-      disable: {}
+      secondary: {
+        background: themeVars.color.green20,
+        color: themeVars.color.gray100,
+        border: `1px solid ${themeVars.color.gray20}`,
+
+        selectors: {
+          '&[data-hovered]': {
+            background: themeVars.color.gray10,
+            color: themeVars.color.gray100,
+            border: `1px solid ${themeVars.color.gray20}`
+          },
+          '&[data-focused]': {
+            background: themeVars.color.gray20,
+            color: themeVars.color.gray100,
+            border: `1px solid ${themeVars.color.gray20}`
+          },
+          '&[data-disabled]': {
+            borderColor: themeVars.color.gray10,
+            color: themeVars.color.gray40
+          }
+        }
+      },
+      tertiary: {
+        background: '#fff',
+        color: themeVars.color.gray100,
+
+        selectors: {
+          '&[data-hovered]': {
+            background: themeVars.color.gray10,
+            color: themeVars.color.gray100
+          },
+          '&[data-focused]': {
+            background: themeVars.color.gray10,
+            color: themeVars.color.gray100
+          },
+          '&[data-disabled]': {
+            borderColor: themeVars.color.gray10,
+            color: themeVars.color.gray40
+          }
+        }
+      },
+      danger: {
+        background: themeVars.color.red60,
+        color: '#ffffff',
+
+        selectors: {
+          '&[data-hovered]': {
+            background: themeVars.color.red80,
+            color: '#ffffff'
+          },
+          '&[data-focused]': {
+            background: themeVars.color.red20,
+            color: '#ffffff'
+          },
+          '&[data-disabled]': {
+            borderColor: themeVars.color.gray10,
+            color: themeVars.color.gray40
+          }
+        }
+      }
     }
   },
 
@@ -284,8 +345,7 @@ export const button = recipe({
 
   defaultVariants: {
     type: 'default',
-    size: 'medium',
-    state: 'default'
+    size: 'small'
   }
 })
 
