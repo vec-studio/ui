@@ -72,7 +72,7 @@ import { componentsClassName } from './components.css'
 export function Components() {
   return (
     <div className={`${componentsClassName}`}>
-      <Card title="Button">
+      <Card title="Button" to="/button">
         <Button>Press me</Button>
       </Card>
       <Card title="ToggleButton">

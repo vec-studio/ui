@@ -7,13 +7,20 @@ export const cardClassName = style({
   display: 'flex',
   flexDirection: 'column',
   minWidth: '15rem',
-  padding: '1rem'
+  padding: '1rem',
+  position: 'relative'
 })
 
 export const cardTitleClassName = style({
   fontWeight: '700',
   lineHeight: '1.3',
   marginBottom: '1rem'
+})
+
+export const cardLinkClassName = style({
+  position: 'absolute',
+  right: '0.5rem',
+  top: '0.25rem'
 })
 
 export const cardContentClassName = style({

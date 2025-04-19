@@ -258,7 +258,7 @@ export const button = recipe({
         height: '3.428rem'
       }
     },
-    type: {
+    variant: {
       default: {
         background: themeVars.color.gray100,
         color: '#ffffff',
@@ -344,8 +344,8 @@ export const button = recipe({
   compoundVariants: [],
 
   defaultVariants: {
-    type: 'default',
-    size: 'small'
+    size: 'small',
+    variant: 'default'
   }
 })
 
