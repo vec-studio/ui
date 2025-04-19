@@ -4,7 +4,7 @@ import { type ButtonProps as RACButtonProps, Button as RACButton } from 'react-a
 import { button } from './button.css'
 import { cn } from './utils'
 
-export type ButtonProps = RACButtonProps & RecipeVariants<typeof button> & {}
+export type ButtonProps = RACButtonProps & RecipeVariants<typeof button> & React.RefAttributes<HTMLButtonElement> & {}
 
 export function Button(props: ButtonProps) {
   const buttonProps = lodash.omit(props, button.variants())

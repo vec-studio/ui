@@ -21,14 +21,17 @@ export const buttonHighlightHoverVar = createVar()
 export const buttonHighlightPressedVar = createVar()
 
 const buttonStyleRule: ComplexStyleRule = {
+  alignItems: 'center',
   border: 'none',
   borderRadius: '6px',
   boxSizing: 'border-box',
+  display: 'flex',
+  fontFamily: 'system-ui',
   fontSize: '1rem',
+  fontWeight: '500',
+  gap: '0.428rem',
+  justifyContent: 'center',
   outline: 'none',
-  padding: '4px 12px',
-  textAlign: 'center',
-  verticalAlign: 'middle',
 
   selectors: {
     '&[data-focus-visible]': {
@@ -249,13 +252,32 @@ export const button = recipe({
   variants: {
     size: {
       small: {
-        height: '2.285rem'
+        height: '2.285rem',
+        paddingInline: '0.857rem',
+        selectors: {
+          '&:has(svg:only-child)': {
+            padding: '0.285rem'
+          }
+        }
       },
       medium: {
-        height: '2.857rem'
+        height: '2.857rem',
+        paddingInline: '1.142rem',
+        selectors: {
+          '&:has(svg:only-child)': {
+            padding: '0.571rem'
+          }
+        }
       },
       large: {
-        height: '3.428rem'
+        fontSize: '1.142rem',
+        height: '3.428rem',
+        paddingInline: '1.142rem',
+        selectors: {
+          '&:has(svg:only-child)': {
+            padding: '0.857rem'
+          }
+        }
       }
     },
     variant: {
@@ -273,67 +295,74 @@ export const button = recipe({
             color: '#ffffff'
           },
           '&[data-disabled]': {
-            borderColor: themeVars.color.gray10,
+            background: themeVars.color.gray10,
             color: themeVars.color.gray40
           }
         }
       },
       secondary: {
-        background: themeVars.color.green20,
-        color: themeVars.color.gray100,
+        background: '#ffffff',
         border: `1px solid ${themeVars.color.gray20}`,
+        color: themeVars.color.gray100,
 
         selectors: {
           '&[data-hovered]': {
             background: themeVars.color.gray10,
-            color: themeVars.color.gray100,
-            border: `1px solid ${themeVars.color.gray20}`
+            color: themeVars.color.gray100
           },
           '&[data-focused]': {
-            background: themeVars.color.gray20,
-            color: themeVars.color.gray100,
-            border: `1px solid ${themeVars.color.gray20}`
+            background: themeVars.color.gray10,
+            color: themeVars.color.gray100
           },
           '&[data-disabled]': {
-            borderColor: themeVars.color.gray10,
+            background: themeVars.color.gray10,
+            border: `1px solid ${themeVars.color.gray10}`,
             color: themeVars.color.gray40
           }
         }
       },
       tertiary: {
-        background: '#fff',
+        background: '#ffffff',
         color: themeVars.color.gray100,
+        border: `1px solid #ffffff`,
 
         selectors: {
           '&[data-hovered]': {
             background: themeVars.color.gray10,
-            color: themeVars.color.gray100
+            color: themeVars.color.gray100,
+            border: `1px solid ${themeVars.color.gray10}`
           },
           '&[data-focused]': {
             background: themeVars.color.gray10,
-            color: themeVars.color.gray100
+            color: themeVars.color.gray100,
+            border: `1px solid ${themeVars.color.gray10}`
           },
           '&[data-disabled]': {
-            borderColor: themeVars.color.gray10,
-            color: themeVars.color.gray40
+            background: themeVars.color.gray10,
+            color: themeVars.color.gray40,
+            border: `1px solid ${themeVars.color.gray10}`
           }
         }
       },
       danger: {
         background: themeVars.color.red60,
         color: '#ffffff',
+        border: `1px solid ${themeVars.color.red60}`,
 
         selectors: {
           '&[data-hovered]': {
             background: themeVars.color.red80,
+            border: `1px solid ${themeVars.color.red80}`,
             color: '#ffffff'
           },
           '&[data-focused]': {
             background: themeVars.color.red20,
+            border: `1px solid ${themeVars.color.red20}`,
             color: '#ffffff'
           },
           '&[data-disabled]': {
-            borderColor: themeVars.color.gray10,
+            background: themeVars.color.gray10,
+            border: `1px solid ${themeVars.color.red10}`,
             color: themeVars.color.gray40
           }
         }
