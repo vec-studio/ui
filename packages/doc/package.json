@@ -15,7 +15,7 @@
     "lucide-react": "0.501.0",
     "react": "19.0.0",
     "react-aria": "3.34.3",
-    "react-aria-components": "1.4.0",
+    "react-aria-components": "1.8.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
