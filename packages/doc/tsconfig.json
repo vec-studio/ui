@@ -3,7 +3,6 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "declaration": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["esnext", "dom", "dom.iterable"],
