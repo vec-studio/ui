@@ -3,8 +3,13 @@
   "name": "vecui",
   "version": "0.0.1",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "prepack": "vite build"
   },
   "dependencies": {
     "@types/lodash": "^4.17.16",

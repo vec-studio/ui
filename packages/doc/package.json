@@ -3,7 +3,8 @@
   "name": "doc",
   "type": "module",
   "scripts": {
-    "start": "vite dev"
+    "prestart": "vite build",
+    "start": "vite preview"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.115.3",
