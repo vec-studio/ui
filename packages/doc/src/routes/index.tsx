@@ -5,6 +5,6 @@ function IndexPage() {
   return <div className={indexPageClassName}></div>
 }
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute('/_layout/')({
   component: IndexPage
 })

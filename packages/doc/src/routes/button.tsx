@@ -57,6 +57,6 @@ function ButtonPage() {
   )
 }
 
-export const Route = createFileRoute('/button')({
+export const Route = createFileRoute('/_layout/button')({
   component: ButtonPage
 })

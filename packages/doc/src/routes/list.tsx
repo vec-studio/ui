@@ -10,6 +10,6 @@ function ListPage() {
   )
 }
 
-export const Route = createFileRoute('/list')({
+export const Route = createFileRoute('/_layout/list')({
   component: ListPage
 })
