@@ -1,6 +1,6 @@
 {
   "autoCodeSplitting": true,
-  "routesDirectory": "./src/pages",
+  "routesDirectory": "./src/routes",
   "target": "react",
   "virtualRouteConfig": "./src/routes.ts"
 }

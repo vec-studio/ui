@@ -1,13 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Components } from 'src/components'
 import { indexPageClassName } from './index.css'
 
 function IndexPage() {
-  return (
-    <div className={indexPageClassName}>
-      <Components />
-    </div>
-  )
+  return <div className={indexPageClassName}></div>
 }
 
 export const Route = createFileRoute('/')({
