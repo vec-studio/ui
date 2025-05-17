@@ -1,3 +1,3 @@
 import { style } from '@vanilla-extract/css'
 
-export const indexPageClassName = style({})
+export const iconsPageClassName = style({})
