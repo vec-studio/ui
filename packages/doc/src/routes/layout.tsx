@@ -1,8 +1,14 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { Outlet } from '@tanstack/react-router'
+import { createFileRoute, Outlet } from '@tanstack/react-router'
+import { SideNav } from 'src/components/side-nav'
+import { layoutClassName } from './layout.css'
 
 function Layout() {
-  return <Outlet />
+  return (
+    <div className={layoutClassName}>
+      <SideNav />
+      <Outlet />
+    </div>
+  )
 }
 
 export const Route = createFileRoute('/_layout')({
