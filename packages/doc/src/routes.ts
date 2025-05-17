@@ -25,6 +25,6 @@ export const routes = rootRoute('root.tsx', [
     route('date-table', 'date-table.tsx'),
     route('date-picker', 'date-picker.tsx'),
     route('form', 'form.tsx'),
-    route('text-filed', 'text-filed.tsx')
+    route('text-field', 'text-field.tsx')
   ])
 ])

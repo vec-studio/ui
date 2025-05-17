@@ -25,7 +25,7 @@ export const SideNav: FunctionComponent = props => {
               <Link to="/typography">Typography</Link>
             </li>
             <li>
-              <Link to="/shadows">Shadows & blurs</Link>
+              <Link to="/shadows-blurs">Shadows & blurs</Link>
             </li>
             <li>
               <Link to="/states">States</Link>
@@ -68,16 +68,16 @@ export const SideNav: FunctionComponent = props => {
               <Link to="/color-wheel">Color Wheel</Link>
             </li>
             <li>
-              <Link to="/date">Date Table</Link>
+              <Link to="/date-table">Date Table</Link>
             </li>
             <li>
-              <Link to="/date">Date Picker</Link>
+              <Link to="/date-picker">Date Picker</Link>
             </li>
             <li>
               <Link to="/form">Form</Link>
             </li>
             <li>
-              <Link to="/text-filed">Text filed</Link>
+              <Link to="/text-field">Text filed</Link>
             </li>
           </ul>
         </div>
