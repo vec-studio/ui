@@ -1,0 +1,4 @@
+{
+  "*.{js,ts,tsx,css,json,html}": ["prettier --write"],
+  "*.md": ["prettier --parser markdown --write"]
+}
