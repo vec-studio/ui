@@ -28,9 +28,10 @@ const buttonStyleRule: ComplexStyleRule = {
   display: 'flex',
   fontFamily: 'system-ui',
   fontSize: '1rem',
-  fontWeight: '500',
+  fontWeight: '400',
   gap: '0.428rem',
   justifyContent: 'center',
+  lineHeight: '1.142rem',
   outline: 'none',
 
   selectors: {
@@ -281,88 +282,92 @@ export const button = recipe({
       }
     },
     variant: {
-      default: {
-        background: themeVars.color.gray100,
+      accent: {
+        backgroundColor: themeVars.color.blue70,
         color: '#ffffff',
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.gray40,
-            color: '#ffffff'
+            backgroundColor: themeVars.color.blue80
           },
           '&[data-focused]': {
-            background: themeVars.color.gray20,
-            color: '#ffffff'
+            backgroundColor: themeVars.color.blue60,
+            border: `1px solid ${themeVars.color.blue70}`
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
+            backgroundColor: themeVars.color.blue20,
+            color: themeVars.color.gray40
+          }
+        }
+      },
+      primary: {
+        backgroundColor: themeVars.color.gray80,
+        color: '#ffffff',
+
+        selectors: {
+          '&[data-hovered]': {
+            background: themeVars.color.gray100
+          },
+          '&[data-focused]': {
+            background: themeVars.color.gray20
+          },
+          '&[data-disabled]': {
+            background: themeVars.color.gray20,
             color: themeVars.color.gray40
           }
         }
       },
       secondary: {
-        background: '#ffffff',
+        backgroundColor: '#ffffff',
         border: `1px solid ${themeVars.color.gray20}`,
         color: themeVars.color.gray100,
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100
+            backgroundColor: themeVars.color.gray10,
+            border: `1px solid ${themeVars.color.gray20}`
           },
           '&[data-focused]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100
+            backgroundColor: themeVars.color.gray20,
+            border: 'none'
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
-            border: `1px solid ${themeVars.color.gray10}`,
+            backgroundColor: themeVars.color.gray20,
+            border: 'none',
             color: themeVars.color.gray40
           }
         }
       },
       tertiary: {
-        background: '#ffffff',
+        backgroundColor: '#ffffff',
         color: themeVars.color.gray100,
-        border: `1px solid #ffffff`,
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100,
-            border: `1px solid ${themeVars.color.gray10}`
+            backgroundColor: themeVars.color.gray10
           },
           '&[data-focused]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100,
-            border: `1px solid ${themeVars.color.gray10}`
+            backgroundColor: themeVars.color.gray20
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray40,
-            border: `1px solid ${themeVars.color.gray10}`
+            backgroundColor: themeVars.color.gray20,
+            color: themeVars.color.gray40
           }
         }
       },
-      danger: {
-        background: themeVars.color.red60,
+      negative: {
+        backgroundColor: themeVars.color.red60,
         color: '#ffffff',
-        border: `1px solid ${themeVars.color.red60}`,
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.red80,
-            border: `1px solid ${themeVars.color.red80}`,
-            color: '#ffffff'
+            backgroundColor: themeVars.color.red80
           },
           '&[data-focused]': {
-            background: themeVars.color.red20,
-            border: `1px solid ${themeVars.color.red20}`,
-            color: '#ffffff'
+            backgroundColor: themeVars.color.red40
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
-            border: `1px solid ${themeVars.color.red10}`,
+            backgroundColor: themeVars.color.gray20,
             color: themeVars.color.gray40
           }
         }
@@ -374,7 +379,7 @@ export const button = recipe({
 
   defaultVariants: {
     size: 'small',
-    variant: 'default'
+    variant: 'primary'
   }
 })
 
