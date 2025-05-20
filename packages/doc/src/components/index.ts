@@ -1,4 +1,6 @@
 export * from './card'
+export * from './page'
 export * from './page-content'
 export * from './page-header'
+export * from './page-section'
 export * from './side-nav'
