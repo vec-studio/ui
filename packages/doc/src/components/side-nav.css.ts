@@ -5,7 +5,6 @@ export const border = `1px solid ${themeVars.color.gray20}`
 
 export const sideNavClassName = style({
   width: '19rem',
-  height: '100%',
   borderRight: border
 })
 
