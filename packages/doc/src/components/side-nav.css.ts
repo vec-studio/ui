@@ -1,7 +1,7 @@
 import { globalStyle, style } from '@vanilla-extract/css'
 import { themeVars } from 'vecui'
 
-const border = `1px solid ${themeVars.color.gray20}`
+export const border = `1px solid ${themeVars.color.gray20}`
 
 export const sideNavClassName = style({
   width: '19rem',
