@@ -17,7 +17,10 @@ export const sideNavHeadClassName = style({
   paddingLeft: '3rem'
 })
 globalStyle(`${sideNavHeadClassName} > img`, {})
-globalStyle(`${sideNavHeadClassName} > h1`, {})
+globalStyle(`${sideNavHeadClassName} > h1`, {
+  fontWeight: '600',
+  fontSize: '1.285rem'
+})
 
 export const sideNavContentClassName = style({})
 
@@ -29,4 +32,18 @@ export const sideNavContentSectionClassName = style({
   },
 
   borderBottom: border
+})
+globalStyle(`${sideNavContentSectionClassName} > ul`, {
+  listStyle: 'none',
+  margin: '1.142rem 0 1.142rem 3rem',
+  padding: '0'
+})
+globalStyle(`${sideNavContentSectionClassName} > ul > li`, {
+  height: '2.285rem',
+  lineHeight: '2.285rem'
+})
+globalStyle(`${sideNavContentSectionClassName} > ul > li >a`, {
+  fontWeight: '700',
+  color: themeVars.color.gray100,
+  textDecoration: 'none'
 })
