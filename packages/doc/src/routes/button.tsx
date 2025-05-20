@@ -1,8 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { ChevronDownIcon } from 'lucide-react'
+import lodash from 'lodash'
 import { type RefCallback } from 'react'
-import { Button, ButtonProps } from 'vecui'
-import { buttonGroupClassName, buttonPageClassName } from './button.css'
+import { Page, PageContent, PageHeader, PageSection } from 'src/components'
+import { Button, type ButtonProps } from 'vecui'
+import { buttonPageStatesButtonClassName, buttonPageStatesClassName } from './button.css'
 
 type State = {
   disabled?: boolean
@@ -21,39 +22,37 @@ function forceReactAriaState<T extends HTMLElement>(state: State = {}): RefCallb
 }
 
 function ButtonPage() {
-  const sizes: ButtonProps['size'][] = ['small', 'medium', 'large']
-  const variants: ButtonProps['variant'][] = ['default', 'secondary', 'tertiary', 'danger']
+  const variants: ButtonProps['variant'][] = ['accent', 'primary', 'secondary', 'tertiary', 'negative']
   const states: State[] = [{}, { hovered: true }, { focused: true }, { disabled: true }]
 
   return (
-    <div className={buttonPageClassName}>
-      {variants.map(variant =>
-        states.map(state =>
-          sizes.map(size => (
-            <div className={buttonGroupClassName}>
-              <Button size={size} variant={variant} ref={forceReactAriaState(state)}>
-                Button
-              </Button>
-              <Button size={size} variant={variant} ref={forceReactAriaState(state)}>
-                <ChevronDownIcon />
-                <span>Button</span>
-              </Button>
-              <Button size={size} variant={variant} ref={forceReactAriaState(state)}>
-                <span>Button</span>
-                <ChevronDownIcon />
-              </Button>
-              <Button size={size} variant={variant} ref={forceReactAriaState(state)}>
-                <ChevronDownIcon />
-              </Button>
-              <Button style={{ width: '160px' }} size={size} variant={variant} ref={forceReactAriaState(state)}>
-                <span>Button</span>
-                <ChevronDownIcon />
-              </Button>
-            </div>
-          ))
-        )
-      )}
-    </div>
+    <Page>
+      <PageHeader title={'Button'} description={'Button'} />
+      <PageContent>
+        <PageSection title="Size"></PageSection>
+        <PageSection title="Label and icon"></PageSection>
+        <PageSection title="Variant"></PageSection>
+        <PageSection title="State">
+          <div className={buttonPageStatesClassName}>
+            {states.map(state => (
+              <>
+                <span>{lodash.chain(state).keys().upperFirst().value() || 'Default'}</span>
+                {variants.map(variant => (
+                  <Button
+                    className={buttonPageStatesButtonClassName}
+                    size="small"
+                    variant={variant}
+                    ref={forceReactAriaState(state)}
+                  >
+                    Button
+                  </Button>
+                ))}
+              </>
+            ))}
+          </div>
+        </PageSection>
+      </PageContent>
+    </Page>
   )
 }
 

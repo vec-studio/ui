@@ -1,19 +1,13 @@
-import { style } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 
-export const buttonPageClassName = style({
+export const buttonPageClassName = style({})
+
+export const buttonPageStatesClassName = style({
   display: 'grid',
-  gap: '1rem 2rem',
-  gridTemplateColumns: 'max-content max-content max-content',
-  margin: '3rem'
+  gridTemplateColumns: '1fr repeat(5, max-content)',
+  gap: '1.142rem'
 })
 
-export const buttonGroupClassName = style({
-  display: 'flex',
-  gap: '1.5rem',
-
-  selectors: {
-    '&:nth-child(12n)': {
-      marginBottom: '3rem'
-    }
-  }
+export const buttonPageStatesButtonClassName = style({
+  width: 'fit-content'
 })
