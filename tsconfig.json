@@ -2,24 +2,16 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["esnext", "dom", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "paths": {
-      "vecui": ["../vecui/src/index.ts"],
-      "vecui/*": ["../vecui/src/*"]
-    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "strictNullChecks": true,
-    "target": "esnext",
-    "types": ["vite/client", "@cloudflare/workers-types"]
+    "target": "esnext"
   },
   "files": ["vite.config.ts"],
-  "include": ["src/**/*"]
+  "include": ["src"]
 }

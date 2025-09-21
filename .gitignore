@@ -3,11 +3,12 @@
 !.gitignore
 
 !.husky
-!.scaffdog
-!packages
+!src
 
 !.editorconfig
 !.lintstagedrc.json
 !.prettierrc.json
 !README.md
 !package.json
+!tsconfig.json
+!vite.config.ts
