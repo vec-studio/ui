@@ -12,6 +12,7 @@ export default defineConfig({
       formats: ['es'],
       fileName: 'index',
       cssFileName: 'index'
-    }
+    },
+    sourcemap: true
   }
 })
