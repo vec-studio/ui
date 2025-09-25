@@ -7,7 +7,7 @@ import dtsPlugin from 'vite-plugin-dts'
 import { externalizeDeps as externalizeDepsPlugin } from 'vite-plugin-externalize-deps'
 
 export default defineConfig({
-  plugins: [reactPlugin(), vanillaExtractPlugin(), externalizeDepsPlugin(), dtsPlugin({ outDir: 'dist/types' })],
+  plugins: [reactPlugin(), vanillaExtractPlugin(), externalizeDepsPlugin(), dtsPlugin()],
   build: {
     lib: {
       entry: resolve(dirname(fileURLToPath(import.meta.url)), 'src/index.ts'),
