@@ -12,6 +12,5 @@
     "strict": true,
     "target": "esnext"
   },
-  "files": ["vite.config.ts"],
   "include": ["src"]
 }
