@@ -32,8 +32,27 @@ const buttonStyleRule: ComplexStyleRule = {
   gap: '0.428rem',
   justifyContent: 'center',
   outline: 'none',
+  height: '2.285rem',
+  paddingInline: '0.857rem',
+  background: themeContract.gray10,
+  color: '#ffffff',
 
   selectors: {
+    '&:has(svg:only-child)': {
+      padding: '0.285rem'
+    },
+    '&[data-hovered]': {
+      background: themeContract.gray4,
+      color: '#ffffff'
+    },
+    '&[data-focused]': {
+      background: themeContract.gray2,
+      color: '#ffffff'
+    },
+    '&[data-disabled]': {
+      background: themeContract.gray1,
+      color: themeContract.gray4
+    },
     '&[data-focus-visible]': {
       outline: `2px solid ${semanticVars.color.focusRingColor}`,
       outlineOffset: '-1px'
@@ -249,133 +268,11 @@ const buttonStyleRule: ComplexStyleRule = {
 export const button = recipe({
   base: buttonStyleRule,
 
-  variants: {
-    size: {
-      small: {
-        height: '2.285rem',
-        paddingInline: '0.857rem',
-        selectors: {
-          '&:has(svg:only-child)': {
-            padding: '0.285rem'
-          }
-        }
-      },
-      medium: {
-        height: '2.857rem',
-        paddingInline: '1.142rem',
-        selectors: {
-          '&:has(svg:only-child)': {
-            padding: '0.571rem'
-          }
-        }
-      },
-      large: {
-        fontSize: '1.142rem',
-        height: '3.428rem',
-        paddingInline: '1.142rem',
-        selectors: {
-          '&:has(svg:only-child)': {
-            padding: '0.857rem'
-          }
-        }
-      }
-    },
-    variant: {
-      default: {
-        background: themeContract.gray10,
-        color: '#ffffff',
-
-        selectors: {
-          '&[data-hovered]': {
-            background: themeContract.gray4,
-            color: '#ffffff'
-          },
-          '&[data-focused]': {
-            background: themeContract.gray2,
-            color: '#ffffff'
-          },
-          '&[data-disabled]': {
-            background: themeContract.gray1,
-            color: themeContract.gray4
-          }
-        }
-      },
-      secondary: {
-        background: '#ffffff',
-        border: `1px solid ${themeContract.gray2}`,
-        color: themeContract.gray10,
-
-        selectors: {
-          '&[data-hovered]': {
-            background: themeContract.gray10,
-            color: themeContract.gray10
-          },
-          '&[data-focused]': {
-            background: themeContract.gray10,
-            color: themeContract.gray10
-          },
-          '&[data-disabled]': {
-            background: themeContract.gray10,
-            border: `1px solid ${themeContract.gray10}`,
-            color: themeContract.gray4
-          }
-        }
-      },
-      tertiary: {
-        background: '#ffffff',
-        color: themeContract.gray10,
-        border: `1px solid #ffffff`,
-
-        selectors: {
-          '&[data-hovered]': {
-            background: themeContract.gray10,
-            color: themeContract.gray10,
-            border: `1px solid ${themeContract.gray10}`
-          },
-          '&[data-focused]': {
-            background: themeContract.gray10,
-            color: themeContract.gray10,
-            border: `1px solid ${themeContract.gray10}`
-          },
-          '&[data-disabled]': {
-            background: themeContract.gray1,
-            color: themeContract.gray4,
-            border: `1px solid ${themeContract.gray1}`
-          }
-        }
-      },
-      danger: {
-        background: themeContract.red6,
-        color: '#ffffff',
-        border: `1px solid ${themeContract.red6}`,
-
-        selectors: {
-          '&[data-hovered]': {
-            background: themeContract.red8,
-            border: `1px solid ${themeContract.red8}`,
-            color: '#ffffff'
-          },
-          '&[data-focused]': {
-            background: themeContract.red2,
-            border: `1px solid ${themeContract.red2}`,
-            color: '#ffffff'
-          },
-          '&[data-disabled]': {
-            background: themeContract.gray10,
-            border: `1px solid ${themeContract.red10}`,
-            color: themeContract.gray4
-          }
-        }
-      }
-    }
-  },
+  variants: {},
 
   compoundVariants: [],
 
-  defaultVariants: {
-    size: 'small',
-    variant: 'default'
-  }
+  defaultVariants: {}
 })
 
 export const buttonClassName = style(buttonStyleRule)
