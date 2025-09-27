@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { colorFieldClassName } from './color-field.css'
 import { comboBoxClassName } from './combo-box.css'
 import { searchFieldClassName } from './search-field.css'

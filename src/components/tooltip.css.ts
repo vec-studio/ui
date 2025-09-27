@@ -1,5 +1,5 @@
 import { createVar, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 
 export const tooltipOriginVar = createVar()
 

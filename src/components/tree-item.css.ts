@@ -1,6 +1,6 @@
 import { createVar, style } from '@vanilla-extract/css'
 import { treeClassName } from './tree.css'
-import { semanticVars, themeVars } from '../theme.css'
+import { semanticVars, themeVars } from '../theme'
 
 export const treeItemPaddingVar = createVar()
 export const treeItemFocusRingColorVar = createVar()

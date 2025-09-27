@@ -1,5 +1,5 @@
 import { globalStyle, keyframes, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 
 export const progressBarClassName = style({
   display: 'grid',

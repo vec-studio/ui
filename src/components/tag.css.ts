@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { tagListClassName } from './tag-list.css'
 
 export const tagClassName = style({

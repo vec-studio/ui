@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 import { toolbarClassName } from './toolbar.css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 
 export const toggleButtonClassName = style({
   appearance: 'none',

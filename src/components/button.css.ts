@@ -1,5 +1,5 @@
 import { type ComplexStyleRule, createVar, globalStyle, keyframes, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme.css'
+import { semanticVars, themeVars } from '../theme'
 import { calendarClassName } from './calendar.css'
 import { comboBoxClassName } from './combo-box.css'
 import { datePickerClassName } from './date-picker.css'

@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { searchFieldClassName } from './search-field.css'
 
 export const fieldErrorClassName = style({

@@ -1,6 +1,6 @@
 import { createVar, style } from '@vanilla-extract/css'
 import { tabListClassName } from './tab-list.css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 
 export const tabBorderColorVar = createVar()
 

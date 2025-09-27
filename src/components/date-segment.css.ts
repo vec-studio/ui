@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { dateInputClassName } from './date-input.css'
 import { timeFieldClassName } from './time-filed.css'
 

@@ -1,5 +1,5 @@
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme.css'
+import { semanticVars, themeVars } from '../theme'
 import { gridListClassName } from './grid-list.css'
 
 export const gridListFocusRingColorVar = createVar()

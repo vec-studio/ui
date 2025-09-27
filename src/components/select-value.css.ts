@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { buttonClassName } from './button.css'
 import { selectClassName } from './select.css'
 

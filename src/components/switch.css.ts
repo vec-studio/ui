@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme.css'
+import { semanticVars, themeVars } from '../theme'
 
 export const switchClassName = style({
   display: 'flex',

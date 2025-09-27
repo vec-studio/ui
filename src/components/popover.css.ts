@@ -1,5 +1,5 @@
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { overlayArrowClassName } from './overlay-arrow.css'
 
 export const popoverBackgroundColorVar = createVar()

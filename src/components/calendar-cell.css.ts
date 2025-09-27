@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme.css'
+import { semanticVars, themeVars } from '../theme'
 import { calendarClassName } from './calendar.css'
 import { rangeCalendarClassName } from './range-calendar.css'
 

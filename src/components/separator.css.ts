@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { menuClassName } from './menu.css'
 import { toolbarClassName } from './toolbar.css'
 

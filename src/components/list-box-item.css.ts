@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { comboBoxClassName } from './combo-box.css'
 import { listBoxClassName } from './list-box.css'
 import { popoverClassName } from './popover.css'

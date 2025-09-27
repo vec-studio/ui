@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { colorSliderClassName } from './color-slider.css'
 import { sliderClassName } from './slider.css'
 

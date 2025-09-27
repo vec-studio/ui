@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme.css'
+import { semanticVars } from '../theme'
 import { popoverClassName } from './popover.css'
 import { autocompleteClassName } from './autocomplete.css'
 
