@@ -1,0 +1,58 @@
+import { createTheme } from '@vanilla-extract/css'
+import { themeVars } from './vars.css'
+
+const themeLightTokens = {
+  color: {
+    backgroundColor: '#f8f8f8',
+    blue10: '#edf7ff',
+    blue20: '#ddecf8',
+    blue30: '#cce0f1',
+    blue40: '#93bcdc',
+    blue50: '#66a0cd',
+    blue60: '#2694d6',
+    blue70: '#1f73b7',
+    blue80: '#13456d',
+    blue90: '#0f3655',
+    blue100: '#0a2338',
+    gray10: '#f8f9f9',
+    gray20: '#e8eaec',
+    gray30: '#d8dcde',
+    gray40: '#b0b8be',
+    gray50: '#919ca5',
+    gray60: '#848f99',
+    gray70: '#5c6970',
+    gray80: '#39434b',
+    gray90: '#293239',
+    gray100: '#1c2227',
+    green10: '#eef8f4',
+    green20: '#daeee6',
+    green30: '#cae3d9',
+    green40: '#94c1b0',
+    green50: '#4eab89',
+    green60: '#26a178',
+    green70: '#037f52',
+    green80: '#104b35',
+    green90: '#0b3b29',
+    green100: '#0c261c',
+    highlightHover: 'rgb(0 0 0 / 0.07)',
+    highlightPressed: 'rgb(0 0 0 / 0.15)',
+    purple10: '#d5c9fa',
+    purple20: '#b8a3f6',
+    purple30: '#997cf2',
+    purple40: '#7a54ef',
+    purple50: '#582ddc',
+    purple60: '#3c1e95',
+    red10: '#fff1f1',
+    red20: '#ffd7d9',
+    red30: '#ffb3b8',
+    red40: '#ff8389',
+    red50: '#fa4d56',
+    red60: '#da1e28',
+    red70: '#a2191f',
+    red80: '#750e13',
+    red90: '#520408',
+    red100: '#2d0709'
+  }
+}
+
+export const themeLightClassName = createTheme(themeVars, themeLightTokens)
