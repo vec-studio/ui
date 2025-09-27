@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars } from '../theme'
 
 export const numberFieldClassName = style({
   marginBottom: '8px',

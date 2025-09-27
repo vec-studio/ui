@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 
 export const switchClassName = style({
   display: 'flex',
@@ -22,7 +22,7 @@ export const indicatorClassName = style({
       width: '2rem',
       height: '1.143rem',
       border: `2px solid ${semanticVars.color.borderColor}`,
-      background: themeVars.color.backgroundColor,
+      background: themeContract.gray1,
       borderRadius: '1.143rem',
       transition: 'all 200ms'
     },

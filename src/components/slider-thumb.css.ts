@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 import { sliderClassName } from './slider.css'
 
 export const sliderThumbClassName = style({
@@ -10,7 +10,7 @@ export const sliderThumbClassName = style({
       height: '1.429rem',
       borderRadius: '50%',
       background: semanticVars.color.highlightBackground,
-      border: `2px solid ${themeVars.color.backgroundColor}`,
+      border: `2px solid ${themeContract.gray1}`,
       forcedColorAdjust: 'none'
     },
     [`${sliderClassName} &[data-dragging]`]: {

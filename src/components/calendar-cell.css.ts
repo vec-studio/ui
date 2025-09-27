@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 import { calendarClassName } from './calendar.css'
 import { rangeCalendarClassName } from './range-calendar.css'
 
@@ -20,7 +20,7 @@ export const calendarCellClassName = style({
       display: 'none'
     },
     [`${calendarClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray10
+      background: themeContract.gray1
     },
     [`${calendarClassName} &[data-focus-visible]`]: {
       outline: `2px solid ${semanticVars.color.focusRingColor}`,
@@ -55,7 +55,7 @@ export const calendarCellClassName = style({
       display: 'none'
     },
     [`${rangeCalendarClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray10
+      background: themeContract.gray1
     },
     [`${rangeCalendarClassName} &[data-focus-visible]`]: {
       outline: `2px solid ${semanticVars.color.highlightBackground}`,

@@ -1,5 +1,5 @@
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 import { gridListClassName } from './grid-list.css'
 
 export const gridListFocusRingColorVar = createVar()
@@ -25,7 +25,7 @@ export const gridListItemClassName = style({
       outlineOffset: '-2px'
     },
     [`${gridListClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray10
+      background: themeContract.gray1
     },
     [`${gridListClassName} &[data-selected]`]: {
       vars: {

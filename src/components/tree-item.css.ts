@@ -1,6 +1,6 @@
 import { createVar, style } from '@vanilla-extract/css'
 import { treeClassName } from './tree.css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 
 export const treeItemPaddingVar = createVar()
 export const treeItemFocusRingColorVar = createVar()
@@ -32,7 +32,7 @@ export const treeItemClassName = style({
       outlineOffset: '-2px'
     },
     [`${treeClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray10
+      background: themeContract.gray1
     },
     [`${treeClassName} &[data-selected]`]: {
       vars: {

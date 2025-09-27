@@ -4,6 +4,6 @@ import openProps from 'open-props'
 import { themeContract } from './contract.css'
 import { tokenKeys, type Tokens } from './token.css'
 
-const themeDarkTokens = lodash.pick(openProps, tokenKeys) as Tokens
+const themeLightTokens = lodash.pick(openProps, tokenKeys) as Tokens
 
-export const themeDarkClassName = createTheme(themeContract, themeDarkTokens)
+export const themeLightClassName = createTheme(themeContract, themeLightTokens)

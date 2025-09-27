@@ -1,5 +1,5 @@
 import { type ComplexStyleRule, createVar, globalStyle, keyframes, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 import { calendarClassName } from './calendar.css'
 import { comboBoxClassName } from './combo-box.css'
 import { datePickerClassName } from './date-picker.css'
@@ -54,13 +54,13 @@ const buttonStyleRule: ComplexStyleRule = {
       lineHeight: '0.857rem',
       verticalAlign: 'middle',
       textAlign: 'center',
-      background: themeVars.color.gray50,
-      color: themeVars.color.gray10,
+      background: themeContract.gray5,
+      color: themeContract.gray10,
       border: 'none',
       padding: 0
     },
     [`${searchFieldClassName} &[data-pressed]`]: {
-      background: themeVars.color.gray60
+      background: themeContract.gray6
     },
     // select
     [`${selectClassName} &`]: {
@@ -282,88 +282,88 @@ export const button = recipe({
     },
     variant: {
       default: {
-        background: themeVars.color.gray100,
+        background: themeContract.gray10,
         color: '#ffffff',
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.gray40,
+            background: themeContract.gray4,
             color: '#ffffff'
           },
           '&[data-focused]': {
-            background: themeVars.color.gray20,
+            background: themeContract.gray2,
             color: '#ffffff'
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray40
+            background: themeContract.gray1,
+            color: themeContract.gray4
           }
         }
       },
       secondary: {
         background: '#ffffff',
-        border: `1px solid ${themeVars.color.gray20}`,
-        color: themeVars.color.gray100,
+        border: `1px solid ${themeContract.gray2}`,
+        color: themeContract.gray10,
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100
+            background: themeContract.gray10,
+            color: themeContract.gray10
           },
           '&[data-focused]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100
+            background: themeContract.gray10,
+            color: themeContract.gray10
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
-            border: `1px solid ${themeVars.color.gray10}`,
-            color: themeVars.color.gray40
+            background: themeContract.gray10,
+            border: `1px solid ${themeContract.gray10}`,
+            color: themeContract.gray4
           }
         }
       },
       tertiary: {
         background: '#ffffff',
-        color: themeVars.color.gray100,
+        color: themeContract.gray10,
         border: `1px solid #ffffff`,
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100,
-            border: `1px solid ${themeVars.color.gray10}`
+            background: themeContract.gray10,
+            color: themeContract.gray10,
+            border: `1px solid ${themeContract.gray10}`
           },
           '&[data-focused]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray100,
-            border: `1px solid ${themeVars.color.gray10}`
+            background: themeContract.gray10,
+            color: themeContract.gray10,
+            border: `1px solid ${themeContract.gray10}`
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
-            color: themeVars.color.gray40,
-            border: `1px solid ${themeVars.color.gray10}`
+            background: themeContract.gray1,
+            color: themeContract.gray4,
+            border: `1px solid ${themeContract.gray1}`
           }
         }
       },
       danger: {
-        background: themeVars.color.red60,
+        background: themeContract.red6,
         color: '#ffffff',
-        border: `1px solid ${themeVars.color.red60}`,
+        border: `1px solid ${themeContract.red6}`,
 
         selectors: {
           '&[data-hovered]': {
-            background: themeVars.color.red80,
-            border: `1px solid ${themeVars.color.red80}`,
+            background: themeContract.red8,
+            border: `1px solid ${themeContract.red8}`,
             color: '#ffffff'
           },
           '&[data-focused]': {
-            background: themeVars.color.red20,
-            border: `1px solid ${themeVars.color.red20}`,
+            background: themeContract.red2,
+            border: `1px solid ${themeContract.red2}`,
             color: '#ffffff'
           },
           '&[data-disabled]': {
-            background: themeVars.color.gray10,
-            border: `1px solid ${themeVars.color.red10}`,
-            color: themeVars.color.gray40
+            background: themeContract.gray10,
+            border: `1px solid ${themeContract.red10}`,
+            color: themeContract.gray4
           }
         }
       }

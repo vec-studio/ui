@@ -1,5 +1,5 @@
 import { createVar, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 import {
   checkboxBackgroundColorVar,
   checkboxCheckmarkColorVar,
@@ -64,7 +64,7 @@ export const tableRowClassName = style({
       outlineOffset: '-2px'
     },
     '&[data-pressed]': {
-      background: themeVars.color.gray10
+      background: themeContract.gray1
     },
     '&[data-selected]': {
       vars: {

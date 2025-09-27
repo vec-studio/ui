@@ -1,5 +1,5 @@
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 import { gridListItemClassName } from './grid-list-item.css'
 
 export const checkboxBackgroundColorVar = createVar()
@@ -65,7 +65,7 @@ export const checkboxCheckboxClassName = style({
       background: checkboxSelectedColorPressedVar
     },
     [`${checkboxClassName}[data-invalid] &`]: {
-      [checkboxCheckmarkColorVar]: themeVars.color.gray10,
+      [checkboxCheckmarkColorVar]: themeContract.gray1,
       borderColor: semanticVars.color.invalidColor
     },
     [`${checkboxClassName}[data-invalid][data-pressed] &`]: {

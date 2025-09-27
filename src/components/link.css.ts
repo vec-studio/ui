@@ -1,9 +1,9 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars, themeVars } from '../theme'
+import { semanticVars, themeContract } from '../theme'
 import { breadcrumbsClassName } from './breadcrumbs.css'
 
 export const linkClassName = style({
-  color: themeVars.color.gray100,
+  color: themeContract.gray10,
   fontSize: '1.285rem',
   transition: 'all 200ms',
   textDecoration: 'underline',
