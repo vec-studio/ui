@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css'
+import { semanticVars } from '../theme'
 
 export const breadcrumbsClassName = style({
   display: 'flex',
@@ -7,5 +8,5 @@ export const breadcrumbsClassName = style({
   margin: 0,
   padding: 0,
   fontSize: '1.285rem',
-  color: 'var(--text-color)'
+  color: semanticVars.color.textColor
 })

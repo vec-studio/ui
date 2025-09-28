@@ -21,46 +21,32 @@ export const buttonHighlightHoverVar = createVar()
 export const buttonHighlightPressedVar = createVar()
 
 const buttonStyleRule: ComplexStyleRule = {
-  alignItems: 'center',
-  border: 'none',
-  borderRadius: '6px',
-  boxSizing: 'border-box',
-  display: 'flex',
-  fontFamily: 'system-ui',
+  color: semanticVars.color.textColor,
+  background: semanticVars.color.buttonBackground,
+  border: `1px solid ${semanticVars.color.borderColor}`,
+  borderRadius: '4px',
+  appearance: 'none',
+  verticalAlign: 'middle',
   fontSize: '1rem',
-  fontWeight: '500',
-  gap: '0.428rem',
-  justifyContent: 'center',
+  textAlign: 'center',
+  margin: 0,
   outline: 'none',
-  height: '2.285rem',
-  paddingInline: '0.857rem',
-  background: themeContract.gray10,
-  color: '#ffffff',
+  padding: '6px 10px',
+  textDecoration: 'none',
 
   selectors: {
-    '&:has(svg:only-child)': {
-      padding: '0.285rem'
-    },
-    '&[data-hovered]': {
-      background: themeContract.gray4,
-      color: '#ffffff'
-    },
-    '&[data-focused]': {
-      background: themeContract.gray2,
-      color: '#ffffff'
-    },
-    '&[data-disabled]': {
-      background: themeContract.gray1,
-      color: themeContract.gray4
+    '&[data-pressed]': {
+      boxShadow: 'inset 0 1px 2px rgb(0 0 0 / 0.1)',
+      background: semanticVars.color.buttonBackgroundPressed,
+      borderColor: semanticVars.color.borderColorPressed
     },
     '&[data-focus-visible]': {
       outline: `2px solid ${semanticVars.color.focusRingColor}`,
       outlineOffset: '-1px'
     },
-    '&[data-pressed]': {
-      boxShadow: 'inset 0 1px 2px rgb(0 0 0 / 0.1)',
-      background: semanticVars.color.buttonBackgroundPressed,
-      borderColor: semanticVars.color.borderColorPressed
+    '&[data-disabled]': {
+      borderColor: semanticVars.color.borderColorDisabled,
+      color: semanticVars.color.textColorDisabled
     },
     // seach-field
     [`${searchFieldClassName} &`]: {
@@ -74,7 +60,7 @@ const buttonStyleRule: ComplexStyleRule = {
       verticalAlign: 'middle',
       textAlign: 'center',
       background: themeContract.gray5,
-      color: themeContract.gray10,
+      color: themeContract.gray0,
       border: 'none',
       padding: 0
     },
