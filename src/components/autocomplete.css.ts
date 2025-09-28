@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const autocompleteClassName = style({
   display: 'flex',
@@ -7,8 +7,8 @@ export const autocompleteClassName = style({
   gap: '12px',
   maxWidth: '300px',
   height: '180px',
-  border: `1px solid ${semanticVars.color.borderColor}`,
+  border: `1px solid ${themeVars.color.borderColor}`,
   padding: '16px',
   borderRadius: '10px',
-  background: semanticVars.color.overlayBackground
+  background: themeVars.color.overlayBackground
 })

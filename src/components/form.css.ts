@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const formClassName = style({
   display: 'flex',
@@ -9,8 +9,8 @@ export const formClassName = style({
 })
 
 globalStyle(`${formClassName} [role=start]`, {
-  border: `2px solid ${semanticVars.color.invalidColor}`,
-  background: semanticVars.color.overlayBackground,
+  border: `2px solid ${themeVars.color.invalidColor}`,
+  background: themeVars.color.overlayBackground,
   borderRadius: '6px',
   padding: '12px',
   maxWidth: '250px',
@@ -18,7 +18,7 @@ globalStyle(`${formClassName} [role=start]`, {
 })
 
 globalStyle(`${formClassName} [role=start]:focus-visible`, {
-  outline: `2px solid ${semanticVars.color.focusRingColor}`,
+  outline: `2px solid ${themeVars.color.focusRingColor}`,
   outlineOffset: '2px'
 })
 

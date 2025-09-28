@@ -1,5 +1,6 @@
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeContract } from '../theme'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 import { gridListClassName } from './grid-list.css'
 
 export const gridListFocusRingColorVar = createVar()
@@ -15,7 +16,7 @@ export const gridListItemClassName = style({
       borderRadius: '6px',
       outline: 'none',
       cursor: 'default',
-      color: semanticVars.color.textColor,
+      color: themeVars.color.textColor,
       fontSize: '1.072rem',
       position: 'relative',
       transform: 'translateZ(0)'
@@ -25,21 +26,21 @@ export const gridListItemClassName = style({
       outlineOffset: '-2px'
     },
     [`${gridListClassName} &[data-pressed]`]: {
-      background: themeContract.gray1
+      background: openProps.gray1
     },
     [`${gridListClassName} &[data-selected]`]: {
       vars: {
-        [gridListFocusRingColorVar]: semanticVars.color.highlightForeground
+        [gridListFocusRingColorVar]: themeVars.color.highlightForeground
       },
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     },
     [`${gridListClassName} &[data-selected][data-focus-visible]`]: {
-      outlineColor: semanticVars.color.highlightForeground,
+      outlineColor: themeVars.color.highlightForeground,
       outlineOffset: '-4px'
     },
     [`${gridListClassName} &[data-disabled]`]: {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     },
     // grid list
     [`${gridListClassName} &[data-href]`]: {
@@ -52,8 +53,8 @@ export const gridListItemClassName = style({
       opacity: '0.6'
     },
     '&[data-drop-target]': {
-      outline: `2px solid ${semanticVars.color.highlightBackground}`,
-      background: semanticVars.color.highlightOverlay
+      outline: `2px solid ${themeVars.color.highlightBackground}`,
+      background: themeVars.color.highlightOverlay
     }
   }
 })

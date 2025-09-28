@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const treeClassName = style({
   display: 'flex',
@@ -7,9 +7,9 @@ export const treeClassName = style({
   gap: '2px',
   overflow: 'auto',
   padding: '4px',
-  border: `1px solid ${semanticVars.color.borderColor}`,
+  border: `1px solid ${themeVars.color.borderColor}`,
   borderRadius: '6px',
-  background: semanticVars.color.overlayBackground,
+  background: themeVars.color.overlayBackground,
   forcedColorAdjust: 'none',
   outline: 'none',
   width: '250px',

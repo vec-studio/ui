@@ -1,10 +1,10 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { searchFieldClassName } from './search-field.css'
 
 export const fieldErrorClassName = style({
   fontSize: '0.857rem',
-  color: semanticVars.color.invalidColor,
+  color: themeVars.color.invalidColor,
 
   selectors: {
     // search-field

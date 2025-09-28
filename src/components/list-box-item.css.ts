@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { comboBoxClassName } from './combo-box.css'
 import { listBoxClassName } from './list-box.css'
 import { popoverClassName } from './popover.css'
@@ -9,7 +9,7 @@ export const listBoxItemClassName = style({
   borderRadius: '6px',
   outline: 'none',
   cursor: 'default',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   fontSize: '1.072rem',
   position: 'relative',
   display: 'flex',
@@ -18,15 +18,15 @@ export const listBoxItemClassName = style({
   minHeight: '32px',
   selectors: {
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '-2px'
     },
     '&[data-selected], &[data-focused]': {
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     },
     '&[data-selected][data-focus-visible]': {
-      outlineColor: semanticVars.color.highlightForeground,
+      outlineColor: themeVars.color.highlightForeground,
       outlineOffset: '-4px'
     },
     '&[href]': {
@@ -51,9 +51,9 @@ export const listBoxItemClassName = style({
         position: 'absolute',
         top: '8px',
         right: '8px',
-        background: semanticVars.color.highlightBackground,
-        border: `2px solid ${semanticVars.color.highlightForeground}`,
-        color: semanticVars.color.highlightForeground,
+        background: themeVars.color.highlightBackground,
+        border: `2px solid ${themeVars.color.highlightForeground}`,
+        color: themeVars.color.highlightForeground,
         width: '22px',
         height: '22px',
         borderRadius: '22px',
@@ -67,7 +67,7 @@ export const listBoxItemClassName = style({
       },
     [`${listBoxClassName}[data-orientation=horizontal] &[data-focus-visible], ${listBoxClassName}[data-layout=grid] &[data-focus-visible]`]:
       {
-        outline: `2px solid ${semanticVars.color.focusRingColor}`,
+        outline: `2px solid ${themeVars.color.focusRingColor}`,
         outlineOffset: '-2px'
       },
     [`${listBoxClassName}[data-orientation=horizontal][data-layout=grid] &`]: {
@@ -81,14 +81,14 @@ export const listBoxItemClassName = style({
       columnGap: '8px'
     },
     [`${listBoxClassName} &[data-disabled]`]: {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     },
     [`${listBoxClassName} &[data-dragging]`]: {
       opacity: '0.6'
     },
     [`${listBoxClassName} &[data-drop-target]`]: {
-      outline: `2px solid ${semanticVars.color.highlightBackground}`,
-      background: semanticVars.color.highlightOverlay
+      outline: `2px solid ${themeVars.color.highlightBackground}`,
+      background: themeVars.color.highlightOverlay
     },
     // select
     [`${popoverClassName} &`]: {
@@ -100,7 +100,7 @@ export const listBoxItemClassName = style({
     [`${popoverClassName} &[data-selected]`]: {
       fontWeight: 600,
       background: 'unset',
-      color: semanticVars.color.textColor
+      color: themeVars.color.textColor
     },
     [`${popoverClassName} &[data-selected]::before`]: {
       content: '"✓"',
@@ -109,8 +109,8 @@ export const listBoxItemClassName = style({
       left: '4px'
     },
     [`${popoverClassName} &[data-focused], ${popoverClassName} &[data-pressed]`]: {
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     },
     // combo box
     [`${comboBoxClassName} ${popoverClassName}[data-trigger=ComboBox] &`]: {
@@ -122,7 +122,7 @@ export const listBoxItemClassName = style({
     [`${comboBoxClassName} ${popoverClassName}[data-trigger=ComboBox] &[data-selected]`]: {
       fontWeight: 600,
       background: 'unset',
-      color: semanticVars.color.textColor
+      color: themeVars.color.textColor
     },
     [`${comboBoxClassName} ${popoverClassName}[data-trigger=ComboBox] &[data-selected]::before`]: {
       content: '✓',
@@ -132,8 +132,8 @@ export const listBoxItemClassName = style({
     },
     [`${comboBoxClassName} ${popoverClassName}[data-trigger=ComboBox] &[data-focused], ${comboBoxClassName} ${popoverClassName}[data-trigger=ComboBox] &[data-pressed]`]:
       {
-        background: semanticVars.color.highlightBackground,
-        color: semanticVars.color.highlightForeground
+        background: themeVars.color.highlightBackground,
+        color: themeVars.color.highlightForeground
       }
   }
 })

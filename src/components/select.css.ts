@@ -1,9 +1,9 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { buttonClassName } from './button.css'
 
 export const selectClassName = style({
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 globalStyle(`${selectClassName} span[aria-hidden]`, {
@@ -11,8 +11,8 @@ globalStyle(`${selectClassName} span[aria-hidden]`, {
   lineHeight: '1.375rem',
   marginLeft: '1rem',
   padding: '1px',
-  background: semanticVars.color.highlightBackground,
-  color: semanticVars.color.highlightForeground,
+  background: themeVars.color.highlightBackground,
+  color: themeVars.color.highlightForeground,
   forcedColorAdjust: 'none',
   borderRadius: '4px',
   fontSize: '0.857rem'

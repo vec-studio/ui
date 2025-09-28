@@ -1,5 +1,5 @@
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { overlayArrowClassName } from './overlay-arrow.css'
 
 export const popoverBackgroundColorVar = createVar()
@@ -8,15 +8,15 @@ export const popoverTriggerWidthVar = createVar()
 
 export const popoverClassName = style({
   vars: {
-    [popoverBackgroundColorVar]: semanticVars.color.overlayBackground,
+    [popoverBackgroundColorVar]: themeVars.color.overlayBackground,
     [popoverOriginVar]: 'initial',
     [popoverTriggerWidthVar]: 'initial'
   },
-  border: `1px solid ${semanticVars.color.borderColor}`,
+  border: `1px solid ${themeVars.color.borderColor}`,
   boxShadow: '0 8px 20px rgba(0 0 0 / 0.1)',
   borderRadius: '6px',
   background: popoverBackgroundColorVar,
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   outline: 'none',
   maxWidth: '250px',
   transition: 'transform 200ms, opacity 200ms',
@@ -92,7 +92,7 @@ globalStyle(`${popoverClassName}[data-placement=left] ${overlayArrowClassName} s
 globalStyle(`${popoverClassName} ${overlayArrowClassName} svg`, {
   display: 'block',
   fill: popoverBackgroundColorVar,
-  stroke: semanticVars.color.borderColor,
+  stroke: themeVars.color.borderColor,
   strokeWidth: '1px'
 })
 

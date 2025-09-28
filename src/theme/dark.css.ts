@@ -1,17 +1,34 @@
 import { createTheme } from '@vanilla-extract/css'
-import lodash from 'lodash'
 import openProps from 'open-props'
-import { themeContract } from './contract.css'
-import { tokenKeys, type Tokens } from './token.css'
+import { themeVars } from './contract.css'
 
-const themeDarkTokens = lodash.reduce(
-  tokenKeys,
-  (prev, curr) => {
-    // @ts-ignore
-    prev[curr] = openProps[curr]
-    return prev
-  },
-  {}
-) as { [K in keyof Tokens]: string }
-
-export const themeDarkClassName = createTheme(themeContract, themeDarkTokens)
+export const themeDarkClassName = createTheme(themeVars, {
+  color: {
+    borderColor: openProps.gray3,
+    borderColorDisabled: openProps.gray1,
+    borderColorHover: openProps.gray4,
+    borderColorPressed: openProps.gray4,
+    buttonBackground: openProps.gray0,
+    buttonBackgroundPressed: openProps.gray1,
+    fieldBackground: openProps.gray1,
+    fieldTextColor: openProps.gray6,
+    focusRingColor: openProps.purple4,
+    highlightBackground: '#6f46ed',
+    highlightBackgroundInvalid: '#cc2000',
+    highlightBackgroundPressed: '#522acd',
+    highlightForeground: 'white',
+    highlightForegroundPressed: '#ddd',
+    highlightOverlay: 'rgb(from #6f46ed r g b / 15%)',
+    invalidColor: openProps.red4,
+    invalidColorPressed: openProps.red5,
+    linkColor: openProps.purple5,
+    linkColorPressed: openProps.purple6,
+    linkColorSecondary: openProps.gray5,
+    overlayBackground: openProps.gray0,
+    textColor: openProps.gray6,
+    textColorBase: openProps.gray5,
+    textColorDisabled: openProps.gray2,
+    textColorHover: openProps.gray6,
+    textColorPlaceholder: openProps.gray4
+  }
+})

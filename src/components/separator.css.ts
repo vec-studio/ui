@@ -1,23 +1,23 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { menuClassName } from './menu.css'
 import { toolbarClassName } from './toolbar.css'
 
 export const separatorClassName = style({
   alignSelf: 'stretch',
-  backgroundColor: semanticVars.color.buttonBackground,
+  backgroundColor: themeVars.color.buttonBackground,
 
   selectors: {
     // menu
     [`${menuClassName} &`]: {
-      background: semanticVars.color.borderColor,
+      background: themeVars.color.borderColor,
       height: '1px',
       margin: '2px 4px'
     },
     // toolbar
     [`${toolbarClassName} &`]: {
       alignSelf: 'stretch',
-      backgroundColor: semanticVars.color.borderColor
+      backgroundColor: themeVars.color.borderColor
     },
     [`${toolbarClassName} &[aria-orientation=vertical]`]: {
       margin: '0px 10px',

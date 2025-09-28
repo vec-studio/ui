@@ -1,5 +1,6 @@
 import { createVar, keyframes, style } from '@vanilla-extract/css'
-import { semanticVars, themeContract } from '../theme'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 
 export const modalFade = keyframes({
   from: {
@@ -50,9 +51,9 @@ export const modalOverlayClassName = style({
 export const modalClassName = style({
   boxShadow: '0 8px 20px rgba(0 0 0 / 0.1)',
   borderRadius: '6px',
-  background: semanticVars.color.overlayBackground,
-  color: semanticVars.color.textColor,
-  border: `1px solid ${themeContract.gray4}`,
+  background: themeVars.color.overlayBackground,
+  color: themeVars.color.textColor,
+  border: `1px solid ${openProps.gray4}`,
   outline: 'none',
   maxWidth: '300px',
 

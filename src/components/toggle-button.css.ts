@@ -1,13 +1,13 @@
 import { style } from '@vanilla-extract/css'
 import { toolbarClassName } from './toolbar.css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const toggleButtonClassName = style({
   appearance: 'none',
-  background: semanticVars.color.buttonBackground,
-  border: `1px solid ${semanticVars.color.borderColor}`,
+  background: themeVars.color.buttonBackground,
+  border: `1px solid ${themeVars.color.borderColor}`,
   borderRadius: '4px',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   fontSize: '1rem',
   forcedColorAdjust: 'none',
   margin: '0',
@@ -19,26 +19,26 @@ export const toggleButtonClassName = style({
   selectors: {
     '&[data-pressed]': {
       boxShadow: 'inset 0 1px 2px rgb(0 0 0 / 0.1)',
-      background: semanticVars.color.buttonBackgroundPressed,
-      borderColor: semanticVars.color.borderColorPressed
+      background: themeVars.color.buttonBackgroundPressed,
+      borderColor: themeVars.color.borderColorPressed
     },
     '&[data-selected]': {
-      background: semanticVars.color.highlightBackground,
-      borderColor: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      borderColor: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     },
     '&[data-selected][data-pressed]': {
-      background: semanticVars.color.highlightBackground,
-      borderColor: semanticVars.color.highlightBackground
+      background: themeVars.color.highlightBackground,
+      borderColor: themeVars.color.highlightBackground
     },
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     },
     '&[data-disabled]': {
-      borderColor: semanticVars.color.borderColorDisabled,
-      background: semanticVars.color.buttonBackground,
-      color: semanticVars.color.textColorDisabled
+      borderColor: themeVars.color.borderColorDisabled,
+      background: themeVars.color.buttonBackground,
+      color: themeVars.color.textColorDisabled
     },
     // toolbar
     [`${toolbarClassName} &`]: {

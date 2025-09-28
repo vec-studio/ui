@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { comboBoxClassName } from './combo-box.css'
 import { popoverClassName } from './popover.css'
 
@@ -9,9 +9,9 @@ export const listBoxClassName = style({
   gap: '4px',
   overflow: 'auto',
   padding: '4px',
-  border: `1px solid ${semanticVars.color.borderColor}`,
+  border: `1px solid ${themeVars.color.borderColor}`,
   borderRadius: '6px',
-  background: semanticVars.color.overlayBackground,
+  background: themeVars.color.overlayBackground,
   forcedColorAdjust: 'none',
   outline: 'none',
   width: '250px',
@@ -21,7 +21,7 @@ export const listBoxClassName = style({
 
   selectors: {
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '-1px'
     },
     [`&[data-layout=grid]`]: {
@@ -52,9 +52,9 @@ export const listBoxClassName = style({
       fontStyle: 'italic'
     },
     '&[data-drop-target]': {
-      outline: `2px solid ${semanticVars.color.highlightBackground}`,
+      outline: `2px solid ${themeVars.color.highlightBackground}`,
       outlineOffset: '-1px',
-      background: semanticVars.color.highlightOverlay
+      background: themeVars.color.highlightOverlay
     },
     // select
     [`${popoverClassName} &`]: {

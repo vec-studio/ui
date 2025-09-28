@@ -1,8 +1,8 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const dateRangePickerClassName = style({
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 globalStyle(`${dateRangePickerClassName} [slot=start] + span`, {

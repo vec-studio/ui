@@ -1,10 +1,10 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const calendarClassName = style({
   width: 'fit-content',
   maxWidth: '100%',
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 globalStyle(`${calendarClassName} header`, {

@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const tabPanelClassName = style({
   marginTop: '4px',
@@ -9,7 +9,7 @@ export const tabPanelClassName = style({
 
   selectors: {
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`
+      outline: `2px solid ${themeVars.color.focusRingColor}`
     }
   }
 })

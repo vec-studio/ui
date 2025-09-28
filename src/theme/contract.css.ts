@@ -1,4 +1,32 @@
 import { createThemeContract } from '@vanilla-extract/css'
-import { tokens, type Tokens } from './token.css'
 
-export const themeContract = createThemeContract<{ [K in keyof Tokens]: null }>(tokens)
+export const themeVars = createThemeContract({
+  color: {
+    borderColor: null,
+    borderColorDisabled: null,
+    borderColorHover: null,
+    borderColorPressed: null,
+    buttonBackground: null,
+    buttonBackgroundPressed: null,
+    fieldBackground: null,
+    fieldTextColor: null,
+    focusRingColor: null,
+    highlightBackground: null,
+    highlightBackgroundInvalid: null,
+    highlightBackgroundPressed: null,
+    highlightForeground: null,
+    highlightForegroundPressed: null,
+    highlightOverlay: null,
+    invalidColor: null,
+    invalidColorPressed: null,
+    linkColor: null,
+    linkColorPressed: null,
+    linkColorSecondary: null,
+    overlayBackground: null,
+    textColor: null,
+    textColorBase: null,
+    textColorDisabled: null,
+    textColorHover: null,
+    textColorPlaceholder: null
+  }
+})

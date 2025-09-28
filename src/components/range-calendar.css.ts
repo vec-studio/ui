@@ -1,10 +1,10 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const rangeCalendarClassName = style({
   width: 'fit-content',
   maxWidth: '100%',
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 globalStyle(`${rangeCalendarClassName} header`, {
@@ -23,5 +23,5 @@ globalStyle(`${rangeCalendarClassName} table td`, {
 
 globalStyle(`${rangeCalendarClassName} [slot=errorMessage]`, {
   fontSize: '0.857rem',
-  color: semanticVars.color.invalidColor
+  color: themeVars.color.invalidColor
 })

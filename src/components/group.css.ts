@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { datePickerClassName } from './date-picker.css'
 import { dateRangePickerClassName } from './date-range-picker.css'
 import { numberFieldClassName } from './number-field.css'
@@ -25,17 +25,17 @@ export const groupClassName = style({
       overflow: 'auto',
       position: 'relative',
       padding: '4px 4px 4px 8px',
-      border: `1px solid ${semanticVars.color.borderColor}`,
+      border: `1px solid ${themeVars.color.borderColor}`,
       borderRadius: '6px',
-      background: semanticVars.color.fieldBackground,
+      background: themeVars.color.fieldBackground,
       whiteSpace: 'nowrap'
     },
     [`${dateRangePickerClassName} &[data-pressed]`]: {
       boxShadow: 'none',
-      background: semanticVars.color.highlightBackground
+      background: themeVars.color.highlightBackground
     },
     [`${dateRangePickerClassName} &[data-focus-within]`]: {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '-1px'
     },
     // number field
@@ -45,13 +45,13 @@ export const groupClassName = style({
       width: 'fit-content'
     },
     [`${numberFieldClassName} &[data-focus-within]`]: {
-      outline: `1px solid ${semanticVars.color.focusRingColor}`
+      outline: `1px solid ${themeVars.color.focusRingColor}`
     },
     // text field
     [`${textFieldClassName} &`]: {
       alignItems: 'center',
-      background: semanticVars.color.fieldBackground,
-      border: `1px solid ${semanticVars.color.borderColor}`,
+      background: themeVars.color.fieldBackground,
+      border: `1px solid ${themeVars.color.borderColor}`,
       borderRadius: '6px',
       display: 'flex',
       overflow: 'hidden',

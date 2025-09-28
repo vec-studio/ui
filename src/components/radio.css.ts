@@ -1,12 +1,12 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const radioClassName = style({
   display: 'flex',
   alignItems: 'center',
   gap: '0.571rem',
   fontSize: '1.143rem',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   forcedColorAdjust: 'none',
 
   selectors: {
@@ -16,36 +16,36 @@ export const radioClassName = style({
       width: '1.286rem',
       height: '1.286rem',
       boxSizing: 'border-box',
-      border: `0.143rem solid ${semanticVars.color.borderColor}`,
-      background: semanticVars.color.fieldBackground,
+      border: `0.143rem solid ${themeVars.color.borderColor}`,
+      background: themeVars.color.fieldBackground,
       borderRadius: '1.286rem',
       transition: 'all 200ms'
     },
     '&[data-pressed]:before': {
-      borderColor: semanticVars.color.borderColorPressed
+      borderColor: themeVars.color.borderColorPressed
     },
     '&[data-selected]:before': {
-      borderColor: semanticVars.color.highlightBackground,
+      borderColor: themeVars.color.highlightBackground,
       borderWidth: '0.429rem'
     },
     '&[data-selected][data-pressed]:before': {
-      borderColor: semanticVars.color.highlightBackgroundPressed
+      borderColor: themeVars.color.highlightBackgroundPressed
     },
     '&[data-focus-visible]:before': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     },
     '&[data-invalid]:before': {
-      borderColor: semanticVars.color.invalidColor
+      borderColor: themeVars.color.invalidColor
     },
     '&[data-invalid][data-pressed]:before': {
-      borderColor: semanticVars.color.invalidColorPressed
+      borderColor: themeVars.color.invalidColorPressed
     },
     '&[data-disabled]': {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     },
     '&[data-disabled]:before': {
-      borderColor: semanticVars.color.borderColorDisabled
+      borderColor: themeVars.color.borderColorDisabled
     }
   }
 })

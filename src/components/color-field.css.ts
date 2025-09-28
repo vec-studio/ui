@@ -1,10 +1,10 @@
 import { style, globalStyle } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const colorFieldClassName = style({
   display: 'flex',
   flexDirection: 'column',
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 globalStyle(`${colorFieldClassName} [slot=description]`, {

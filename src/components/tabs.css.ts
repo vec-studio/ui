@@ -1,9 +1,9 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const tabsClassName = style({
   display: 'flex',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
 
   selectors: {
     '&[data-orientation=horizontal]': {

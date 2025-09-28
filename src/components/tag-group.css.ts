@@ -1,12 +1,12 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const tagGroupClassName = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '2px',
   fontSize: 'small',
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 globalStyle(`${tagGroupClassName} [slot=description]`, {
@@ -15,5 +15,5 @@ globalStyle(`${tagGroupClassName} [slot=description]`, {
 
 globalStyle(`${tagGroupClassName} [slot=errorMessage]`, {
   fontSize: '0.857rem',
-  color: semanticVars.color.invalidColor
+  color: themeVars.color.invalidColor
 })

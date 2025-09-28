@@ -1,17 +1,18 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars, themeContract } from '../theme'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 
 export const switchClassName = style({
   display: 'flex',
   alignItems: 'center',
   gap: '0.571rem',
   fontSize: '1.143rem',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   forcedColorAdjust: 'none',
 
   selectors: {
     '&[data-disabled]': {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     }
   }
 })
@@ -21,8 +22,8 @@ export const indicatorClassName = style({
     [`${switchClassName} &`]: {
       width: '2rem',
       height: '1.143rem',
-      border: `2px solid ${semanticVars.color.borderColor}`,
-      background: themeContract.gray1,
+      border: `2px solid ${themeVars.color.borderColor}`,
+      background: openProps.gray1,
       borderRadius: '1.143rem',
       transition: 'all 200ms'
     },
@@ -32,37 +33,37 @@ export const indicatorClassName = style({
       margin: '0.143rem',
       width: '0.857rem',
       height: '0.857rem',
-      background: semanticVars.color.highlightBackground,
+      background: themeVars.color.highlightBackground,
       borderRadius: '16px',
       transition: 'all 200ms'
     },
     [`${switchClassName}[data-pressed] &`]: {
-      borderColor: semanticVars.color.borderColorPressed
+      borderColor: themeVars.color.borderColorPressed
     },
     [`${switchClassName}[data-pressed] &:before`]: {
-      background: semanticVars.color.highlightBackgroundPressed
+      background: themeVars.color.highlightBackgroundPressed
     },
     [`${switchClassName}[data-selected] &`]: {
-      borderColor: semanticVars.color.highlightBackground,
-      background: semanticVars.color.highlightBackground
+      borderColor: themeVars.color.highlightBackground,
+      background: themeVars.color.highlightBackground
     },
     [`${switchClassName}[data-selected] &:before`]: {
-      background: semanticVars.color.fieldBackground,
+      background: themeVars.color.fieldBackground,
       transform: 'translateX(100%)'
     },
     [`${switchClassName}[data-selected][data-pressed] &`]: {
-      borderColor: semanticVars.color.highlightBackgroundPressed,
-      background: semanticVars.color.highlightBackgroundPressed
+      borderColor: themeVars.color.highlightBackgroundPressed,
+      background: themeVars.color.highlightBackgroundPressed
     },
     [`${switchClassName}[data-focus-visible] &`]: {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     },
     [`${switchClassName}[data-disabled] &`]: {
-      borderColor: semanticVars.color.borderColorDisabled
+      borderColor: themeVars.color.borderColorDisabled
     },
     [`${switchClassName}[data-disabled] &:before`]: {
-      background: semanticVars.color.borderColorDisabled
+      background: themeVars.color.borderColorDisabled
     }
   }
 })

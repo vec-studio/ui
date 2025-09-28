@@ -1,10 +1,10 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const dropIndicatorClassName = style({
   selectors: {
     '&[data-drop-target]': {
-      outline: `1px solid ${semanticVars.color.highlightBackground}`
+      outline: `1px solid ${themeVars.color.highlightBackground}`
     }
   }
 })

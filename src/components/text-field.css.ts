@@ -1,12 +1,12 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { modalClassName } from './modal.css'
 
 export const textFieldClassName = style({
   display: 'flex',
   flexDirection: 'column',
   width: 'fit-content',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
 
   selectors: {
     [`${modalClassName} &`]: {

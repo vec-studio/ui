@@ -1,9 +1,10 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars, themeContract } from '../theme'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 import { breadcrumbsClassName } from './breadcrumbs.css'
 
 export const linkClassName = style({
-  color: themeContract.gray10,
+  color: openProps.gray10,
   fontSize: '1.285rem',
   transition: 'all 200ms',
   textDecoration: 'underline',
@@ -16,22 +17,22 @@ export const linkClassName = style({
       textDecorationStyle: 'wavy'
     },
     '&[data-pressed]': {
-      color: semanticVars.color.linkColorPressed
+      color: themeVars.color.linkColorPressed
     },
     '&[data-focus-visible]::after': {
       content: '',
       position: 'absolute',
       inset: '-3px -6px',
       borderRadius: '6px',
-      border: `2px solid ${semanticVars.color.focusRingColor}`
+      border: `2px solid ${themeVars.color.focusRingColor}`
     },
     '&[data-disabled]': {
       cursor: 'default',
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     },
     // breadcurmb
     [`${breadcrumbsClassName} &`]: {
-      color: semanticVars.color.linkColorSecondary,
+      color: themeVars.color.linkColorSecondary,
       outline: 'none',
       position: 'relative',
       textDecoration: 'none',
@@ -49,13 +50,13 @@ export const linkClassName = style({
       position: 'absolute',
       inset: '-2px -4px',
       borderRadius: '6px',
-      border: `2px solid ${semanticVars.color.focusRingColor}`
+      border: `2px solid ${themeVars.color.focusRingColor}`
     },
     [`${breadcrumbsClassName} &[data-disabled]`]: {
       cursor: 'default'
     },
     [`${breadcrumbsClassName} &[data-disabled]:not([data-current])`]: {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     }
   }
 })

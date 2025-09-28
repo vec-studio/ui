@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { popoverClassName } from './popover.css'
 import { autocompleteClassName } from './autocomplete.css'
 
@@ -11,7 +11,7 @@ export const searchFieldClassName = style({
   gridTemplateColumns: '1fr auto',
   alignItems: 'center',
   width: 'fit-content',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
 
   selectors: {
     // menu

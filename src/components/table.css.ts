@@ -1,5 +1,6 @@
 import { createVar, style } from '@vanilla-extract/css'
-import { semanticVars, themeContract } from '../theme'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 import {
   checkboxBackgroundColorVar,
   checkboxCheckmarkColorVar,
@@ -13,8 +14,8 @@ const radiusTop = createVar()
 
 export const tableClassName = style({
   alignSelf: 'start',
-  background: semanticVars.color.overlayBackground,
-  border: `1px solid ${semanticVars.color.borderColor}`,
+  background: themeVars.color.overlayBackground,
+  border: `1px solid ${themeVars.color.borderColor}`,
   borderRadius: '6px',
   borderSpacing: 0,
   forcedColorAdjust: 'none',
@@ -26,14 +27,14 @@ export const tableClassName = style({
 
   selectors: {
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '-1px'
     }
   }
 })
 
 export const tableHeaderClassName = style({
-  color: `${semanticVars.color.textColor}`,
+  color: `${themeVars.color.textColor}`,
   selectors: {
     '&:after': {
       content: '',
@@ -51,7 +52,7 @@ export const tableRowClassName = style({
 
   borderRadius: `${radiusTop} ${radiusTop} ${radiusBottom} ${radiusBottom}`,
   clipPath: `inset(0 round ${radiusTop})`,
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   cursor: 'default',
   fontSize: '1.072rem',
   outline: 'none',
@@ -60,24 +61,24 @@ export const tableRowClassName = style({
 
   selectors: {
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '-2px'
     },
     '&[data-pressed]': {
-      background: themeContract.gray1
+      background: openProps.gray1
     },
     '&[data-selected]': {
       vars: {
-        [focusRingColor]: semanticVars.color.highlightForeground
+        [focusRingColor]: themeVars.color.highlightForeground
       },
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     },
     '&[data-selected][data-focus-visible]': {
       outlineOffset: '-4px'
     },
     '&[data-disabled]': {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     }
   }
 })
@@ -118,7 +119,7 @@ export const tableColumnClassName = style({
       outlineOffset: '-4px'
     },
     [`${tableHeaderClassName} tr:last-child &`]: {
-      borderBottom: `1px solid ${semanticVars.color.borderColor}`,
+      borderBottom: `1px solid ${themeVars.color.borderColor}`,
       cursor: 'default'
     }
   }
@@ -128,10 +129,10 @@ export const tableCheckboxClassName = style({
   selectors: {
     [`:where(${tableRowClassName}) &`]: {
       vars: {
-        [checkboxSelectedColorVar]: semanticVars.color.highlightForeground,
-        [checkboxSelectedColorPressedVar]: semanticVars.color.highlightForegroundPressed,
-        [checkboxCheckmarkColorVar]: semanticVars.color.highlightBackground,
-        [checkboxBackgroundColorVar]: semanticVars.color.highlightBackground
+        [checkboxSelectedColorVar]: themeVars.color.highlightForeground,
+        [checkboxSelectedColorPressedVar]: themeVars.color.highlightForegroundPressed,
+        [checkboxCheckmarkColorVar]: themeVars.color.highlightBackground,
+        [checkboxBackgroundColorVar]: themeVars.color.highlightBackground
       }
     }
   }

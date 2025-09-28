@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { colorSliderClassName } from './color-slider.css'
 import { sliderClassName } from './slider.css'
 
@@ -29,7 +29,7 @@ export const sliderTrackClassName = style({
       content: '',
       display: 'block',
       position: 'absolute',
-      background: semanticVars.color.borderColor
+      background: themeVars.color.borderColor
     },
     [`${sliderClassName}[data-orientation=horizontal] &`]: {
       height: '30px',
@@ -52,7 +52,7 @@ export const sliderTrackClassName = style({
       transform: 'translateX(-50%)'
     },
     [`${sliderClassName}[data-disabled] &::before`]: {
-      background: semanticVars.color.borderColorDisabled
+      background: themeVars.color.borderColorDisabled
     }
   }
 })

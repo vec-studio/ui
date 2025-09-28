@@ -1,11 +1,11 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const checkboxGroupClassName = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.571rem',
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 export const description = globalStyle(`${checkboxGroupClassName} [slot=description]`, {

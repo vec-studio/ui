@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const colorSwatchPickerItemClassName = style({
   position: 'relative',
@@ -10,7 +10,7 @@ export const colorSwatchPickerItemClassName = style({
 
   selectors: {
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     },
     '&[data-selected]::after': {

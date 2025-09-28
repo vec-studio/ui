@@ -1,5 +1,5 @@
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const meterFillColorVar = createVar()
 
@@ -14,7 +14,7 @@ export const meterClassName = style({
   gridTemplateColumns: '1fr auto',
   gap: '4px',
   width: '250px',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
 
   '@media': {
     '(forced-colors: active)': {
@@ -31,7 +31,7 @@ globalStyle(`${meterClassName} .value`, {
 
 globalStyle(`${meterClassName} .bar`, {
   gridArea: 'bar',
-  boxShadow: `inset 0px 0px 0px 1px ${semanticVars.color.borderColor}`,
+  boxShadow: `inset 0px 0px 0px 1px ${themeVars.color.borderColor}`,
   forcedColorAdjust: 'none',
   height: '10px',
   borderRadius: '5px',

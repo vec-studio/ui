@@ -1,5 +1,6 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars, themeContract } from '../theme'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 import { calendarClassName } from './calendar.css'
 import { rangeCalendarClassName } from './range-calendar.css'
 
@@ -20,26 +21,26 @@ export const calendarCellClassName = style({
       display: 'none'
     },
     [`${calendarClassName} &[data-pressed]`]: {
-      background: themeContract.gray1
+      background: openProps.gray1
     },
     [`${calendarClassName} &[data-focus-visible]`]: {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     },
     [`${calendarClassName} &[data-selected]`]: {
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     },
     [`${calendarClassName} &[data-disabled]`]: {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     },
     [`${calendarClassName} &[data-unavailable]`]: {
       textDecoration: 'line-through',
-      color: semanticVars.color.invalidColor
+      color: themeVars.color.invalidColor
     },
     [`${calendarClassName} &[data-invalid]`]: {
-      background: semanticVars.color.invalidColor,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.invalidColor,
+      color: themeVars.color.highlightForeground
     },
     // range calendar
     [`${rangeCalendarClassName} &`]: {
@@ -55,19 +56,19 @@ export const calendarCellClassName = style({
       display: 'none'
     },
     [`${rangeCalendarClassName} &[data-pressed]`]: {
-      background: themeContract.gray1
+      background: openProps.gray1
     },
     [`${rangeCalendarClassName} &[data-focus-visible]`]: {
-      outline: `2px solid ${semanticVars.color.highlightBackground}`,
+      outline: `2px solid ${themeVars.color.highlightBackground}`,
       outlineOffset: '-2px'
     },
     [`${rangeCalendarClassName} &[data-selected]`]: {
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground,
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground,
       borderRadius: 0
     },
     [`${rangeCalendarClassName} &[data-selected][data-focus-visible]`]: {
-      outlineColor: semanticVars.color.highlightBackground,
+      outlineColor: themeVars.color.highlightBackground,
       outlineOffset: '-3px'
     },
     [`${rangeCalendarClassName} &[data-selection-start]`]: {
@@ -79,20 +80,20 @@ export const calendarCellClassName = style({
       borderEndEndRadius: '6px'
     },
     [`${rangeCalendarClassName} &[data-disabled]`]: {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     },
     [`${rangeCalendarClassName} &[data-unavailable]`]: {
       textDecoration: 'line-through',
-      color: semanticVars.color.invalidColor
+      color: themeVars.color.invalidColor
     },
     [`${rangeCalendarClassName} &[data-invalid]`]: {
-      background: semanticVars.color.invalidColor,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.invalidColor,
+      color: themeVars.color.highlightForeground
     }
   }
 })
 
 globalStyle(`${calendarClassName} [slot=errorMessage]`, {
   fontSize: '0.857rem',
-  color: semanticVars.color.invalidColor
+  color: themeVars.color.invalidColor
 })

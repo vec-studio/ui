@@ -1,6 +1,6 @@
 import { createVar, style } from '@vanilla-extract/css'
 import { tabListClassName } from './tab-list.css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const tabBorderColorVar = createVar()
 
@@ -13,7 +13,7 @@ export const tabClassName = style({
   cursor: 'default',
   outline: 'none',
   position: 'relative',
-  color: semanticVars.color.textColorBase,
+  color: themeVars.color.textColorBase,
   transition: 'color 200ms',
   forcedColorAdjust: 'none',
 
@@ -22,20 +22,20 @@ export const tabClassName = style({
       borderBottom: `3px solid ${tabBorderColorVar}`
     },
     '&[data-hovered], &[data-focused]': {
-      color: semanticVars.color.textColorHover
+      color: themeVars.color.textColorHover
     },
     '&[data-selected]': {
       vars: {
-        [tabBorderColorVar]: semanticVars.color.highlightBackground
+        [tabBorderColorVar]: themeVars.color.highlightBackground
       },
-      color: semanticVars.color.textColor
+      color: themeVars.color.textColor
     },
     '&[data-disabled]': {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     },
     '&[data-disabled][data-selected]': {
       vars: {
-        [tabBorderColorVar]: semanticVars.color.textColorDisabled
+        [tabBorderColorVar]: themeVars.color.textColorDisabled
       }
     },
     '&[data-focus-visible]::after': {
@@ -43,7 +43,7 @@ export const tabClassName = style({
       position: 'absolute',
       inset: '4px',
       borderRadius: '4px',
-      border: `2px solid ${semanticVars.color.focusRingColor}`
+      border: `2px solid ${themeVars.color.focusRingColor}`
     },
     [`${tabListClassName}[data-orientation=vertical] &`]: {
       borderInlineEnd: `3px solid ${tabBorderColorVar}`

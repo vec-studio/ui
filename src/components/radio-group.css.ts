@@ -1,11 +1,11 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const radioGroupClassName = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '8px',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
 
   selectors: {
     '&[data-orientation=horizontal]': {

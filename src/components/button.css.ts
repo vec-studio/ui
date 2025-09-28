@@ -1,5 +1,7 @@
 import { type ComplexStyleRule, createVar, globalStyle, keyframes, style } from '@vanilla-extract/css'
-import { semanticVars, themeContract } from '../theme'
+import { recipe } from '@vanilla-extract/recipes'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 import { calendarClassName } from './calendar.css'
 import { comboBoxClassName } from './combo-box.css'
 import { datePickerClassName } from './date-picker.css'
@@ -7,23 +9,22 @@ import { dateRangePickerClassName } from './date-range-picker.css'
 import { disclosureClassName } from './disclosure.css'
 import { gridListItemClassName } from './grid-list-item.css'
 import { gridListClassName } from './grid-list.css'
+import { groupClassName } from './group.css'
+import { numberFieldClassName } from './number-field.css'
 import { rangeCalendarClassName } from './range-calendar.css'
 import { searchFieldClassName } from './search-field.css'
 import { selectClassName } from './select.css'
-import { numberFieldClassName } from './number-field.css'
-import { groupClassName } from './group.css'
-import { treeClassName } from './tree.css'
-import { treeItemClassName, treeItemPaddingVar } from './tree-item.css'
 import { textFieldClassName } from './text-field.css'
-import { recipe } from '@vanilla-extract/recipes'
+import { treeItemClassName, treeItemPaddingVar } from './tree-item.css'
+import { treeClassName } from './tree.css'
 
 export const buttonHighlightHoverVar = createVar()
 export const buttonHighlightPressedVar = createVar()
 
 const buttonStyleRule: ComplexStyleRule = {
-  color: semanticVars.color.textColor,
-  background: semanticVars.color.buttonBackground,
-  border: `1px solid ${semanticVars.color.borderColor}`,
+  color: themeVars.color.textColor,
+  background: themeVars.color.buttonBackground,
+  border: `1px solid ${themeVars.color.borderColor}`,
   borderRadius: '4px',
   appearance: 'none',
   verticalAlign: 'middle',
@@ -37,16 +38,16 @@ const buttonStyleRule: ComplexStyleRule = {
   selectors: {
     '&[data-pressed]': {
       boxShadow: 'inset 0 1px 2px rgb(0 0 0 / 0.1)',
-      background: semanticVars.color.buttonBackgroundPressed,
-      borderColor: semanticVars.color.borderColorPressed
+      background: themeVars.color.buttonBackgroundPressed,
+      borderColor: themeVars.color.borderColorPressed
     },
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '-1px'
     },
     '&[data-disabled]': {
-      borderColor: semanticVars.color.borderColorDisabled,
-      color: semanticVars.color.textColorDisabled
+      borderColor: themeVars.color.borderColorDisabled,
+      color: themeVars.color.textColorDisabled
     },
     // seach-field
     [`${searchFieldClassName} &`]: {
@@ -59,13 +60,13 @@ const buttonStyleRule: ComplexStyleRule = {
       lineHeight: '0.857rem',
       verticalAlign: 'middle',
       textAlign: 'center',
-      background: themeContract.gray5,
-      color: themeContract.gray0,
+      background: openProps.gray5,
+      color: openProps.gray0,
       border: 'none',
       padding: 0
     },
     [`${searchFieldClassName} &[data-pressed]`]: {
-      background: themeContract.gray6
+      background: openProps.gray6
     },
     // select
     [`${selectClassName} &`]: {
@@ -78,18 +79,18 @@ const buttonStyleRule: ComplexStyleRule = {
       maxWidth: '250px'
     },
     [`${selectClassName} &[data-focus-visible]`]: {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '-1px'
     },
     // select
     [`${selectClassName} &[data-disabled]`]: {
-      borderColor: semanticVars.color.borderColorDisabled,
-      color: semanticVars.color.textColorDisabled
+      borderColor: themeVars.color.borderColorDisabled,
+      color: themeVars.color.textColorDisabled
     },
     // combo box
     [`${comboBoxClassName} &`]: {
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground,
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground,
       forcedColorAdjust: 'none',
       borderRadius: '4px',
       border: 'none',
@@ -102,10 +103,10 @@ const buttonStyleRule: ComplexStyleRule = {
     },
     [`${comboBoxClassName} &[data-pressed]`]: {
       boxShadow: 'none',
-      background: semanticVars.color.highlightBackground
+      background: themeVars.color.highlightBackground
     },
     [`${comboBoxClassName} &[data-disabled]`]: {
-      background: semanticVars.color.borderColorDisabled
+      background: themeVars.color.borderColorDisabled
     },
     // calendar
     [`${calendarClassName} &`]: {
@@ -115,11 +116,11 @@ const buttonStyleRule: ComplexStyleRule = {
     },
     // date picker
     [`${datePickerClassName} &`]: {
-      background: semanticVars.color.highlightBackground,
+      background: themeVars.color.highlightBackground,
       border: 'none',
       borderRadius: '4px',
       boxSizing: 'content-box',
-      color: semanticVars.color.highlightForeground,
+      color: themeVars.color.highlightForeground,
       fontSize: '0.857rem',
       forcedColorAdjust: 'none',
       height: '1.429rem',
@@ -129,10 +130,10 @@ const buttonStyleRule: ComplexStyleRule = {
     },
     [`${datePickerClassName} &[data-pressed]`]: {
       boxShadow: 'none',
-      background: semanticVars.color.highlightBackground
+      background: themeVars.color.highlightBackground
     },
     [`${datePickerClassName} &[data-focus-visible]`]: {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     },
     // range calendar
@@ -143,11 +144,11 @@ const buttonStyleRule: ComplexStyleRule = {
     },
     // date range picker
     [`${dateRangePickerClassName} &`]: {
-      background: semanticVars.color.highlightBackground,
+      background: themeVars.color.highlightBackground,
       border: 'none',
       borderRadius: '4px',
       boxSizing: 'content-box',
-      color: semanticVars.color.highlightForeground,
+      color: themeVars.color.highlightForeground,
       flexShrink: 0,
       fontSize: '0.857rem',
       forcedColorAdjust: 'none',
@@ -159,7 +160,7 @@ const buttonStyleRule: ComplexStyleRule = {
       width: '1.429rem'
     },
     [`${dateRangePickerClassName} &[data-focus-visible]`]: {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     },
     // disclosure
@@ -179,7 +180,7 @@ const buttonStyleRule: ComplexStyleRule = {
         [buttonHighlightHoverVar]: 'rgb(255 255 255 / 0.1)',
         [buttonHighlightPressedVar]: 'rgb(255 255 255 / 0.2)'
       },
-      color: semanticVars.color.highlightForeground
+      color: themeVars.color.highlightForeground
     },
     [`${gridListClassName} ${gridListItemClassName} &:not([slot])`]: {
       marginLeft: 'auto'
@@ -201,7 +202,7 @@ const buttonStyleRule: ComplexStyleRule = {
     },
     // number field
     [`${numberFieldClassName} &${groupClassName} [data-focus-within] &`]: {
-      outline: semanticVars.color.focusRingColor
+      outline: themeVars.color.focusRingColor
     },
     [`${numberFieldClassName} &`]: {
       fontSize: '1.4rem',
@@ -217,14 +218,14 @@ const buttonStyleRule: ComplexStyleRule = {
       borderEndStartRadius: '0'
     },
     [`${numberFieldClassName}[data-invalid] &`]: {
-      borderColor: semanticVars.color.invalidColor
+      borderColor: themeVars.color.invalidColor
     },
     [`${numberFieldClassName}[data-invalid]:focus-within &`]: {
-      borderColor: semanticVars.color.focusRingColor
+      borderColor: themeVars.color.focusRingColor
     },
     [`${numberFieldClassName} &[data-disabled]`]: {
-      borderColor: semanticVars.color.borderColorDisabled,
-      color: semanticVars.color.textColorDisabled
+      borderColor: themeVars.color.borderColorDisabled,
+      color: themeVars.color.textColorDisabled
     },
     // tree
     [`${treeClassName} ${treeItemClassName} &[slot=chevron]`]: {
@@ -269,8 +270,8 @@ export const toggleAnimation = keyframes({
 })
 
 globalStyle(`${selectClassName} ${buttonClassName}[dataDisabled] span[aria-hidden]`, {
-  background: semanticVars.color.borderColorDisabled,
-  color: semanticVars.color.textColorDisabled
+  background: themeVars.color.borderColorDisabled,
+  color: themeVars.color.textColorDisabled
 })
 
 // disclosure

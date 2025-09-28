@@ -1,6 +1,7 @@
 import { createVar, style } from '@vanilla-extract/css'
+import openProps from 'open-props'
+import { themeVars } from '../theme'
 import { treeClassName } from './tree.css'
-import { semanticVars, themeContract } from '../theme'
 
 export const treeItemPaddingVar = createVar()
 export const treeItemFocusRingColorVar = createVar()
@@ -19,7 +20,7 @@ export const treeItemClassName = style({
       borderRadius: '6px',
       outline: 'none',
       cursor: 'default',
-      color: semanticVars.color.textColor,
+      color: themeVars.color.textColor,
       fontSize: '1.072rem',
       position: 'relative',
       transform: 'translateZ(0)'
@@ -32,14 +33,14 @@ export const treeItemClassName = style({
       outlineOffset: '-2px'
     },
     [`${treeClassName} &[data-pressed]`]: {
-      background: themeContract.gray1
+      background: openProps.gray1
     },
     [`${treeClassName} &[data-selected]`]: {
       vars: {
-        [treeItemFocusRingColorVar]: semanticVars.color.highlightForeground
+        [treeItemFocusRingColorVar]: themeVars.color.highlightForeground
       },
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     }
   }
 })

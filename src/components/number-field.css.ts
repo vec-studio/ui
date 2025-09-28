@@ -1,9 +1,9 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const numberFieldClassName = style({
   marginBottom: '8px',
-  color: semanticVars.color.textColor
+  color: themeVars.color.textColor
 })
 
 globalStyle(`${numberFieldClassName} [slot=description]`, {

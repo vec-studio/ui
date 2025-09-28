@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const menuItemClassName = style({
   margin: '2px',
@@ -7,7 +7,7 @@ export const menuItemClassName = style({
   borderRadius: '6px',
   outline: 'none',
   cursor: 'default',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   fontSize: '1.072rem',
   position: 'relative',
   display: 'grid',
@@ -18,8 +18,8 @@ export const menuItemClassName = style({
 
   selectors: {
     '&[data-focused]': {
-      background: semanticVars.color.highlightBackground,
-      color: semanticVars.color.highlightForeground
+      background: themeVars.color.highlightBackground,
+      color: themeVars.color.highlightForeground
     },
     '&[data-selection-mode]': {
       paddingLeft: '24px'
@@ -44,7 +44,7 @@ export const menuItemClassName = style({
       cursor: 'pointer'
     },
     '&[data-disabled]': {
-      color: semanticVars.color.textColorDisabled
+      color: themeVars.color.textColorDisabled
     }
   }
 })

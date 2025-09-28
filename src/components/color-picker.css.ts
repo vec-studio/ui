@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const colorPickerClassName = style({
   alignItems: 'center',
@@ -7,7 +7,7 @@ export const colorPickerClassName = style({
   background: 'none',
   border: 'none',
   borderRadius: '4px',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
   display: 'flex',
   fontSize: '1rem',
   gap: '8px',
@@ -17,7 +17,7 @@ export const colorPickerClassName = style({
 
   selectors: {
     '&[data-focus-visible]': {
-      outline: `2px solid ${semanticVars.color.focusRingColor}`,
+      outline: `2px solid ${themeVars.color.focusRingColor}`,
       outlineOffset: '2px'
     }
   }

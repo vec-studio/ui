@@ -1,5 +1,5 @@
 import { globalStyle, keyframes, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const progressBarClassName = style({
   display: 'grid',
@@ -7,7 +7,7 @@ export const progressBarClassName = style({
   gridTemplateColumns: '1fr auto',
   gap: '4px',
   width: '250px',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
 
   selectors: {}
 })
@@ -18,7 +18,7 @@ globalStyle(`${progressBarClassName} .value`, {
 
 globalStyle(`${progressBarClassName} .bar`, {
   gridArea: 'bar',
-  boxShadow: `inset 0px 0px 0px 1px ${semanticVars.color.borderColor}`,
+  boxShadow: `inset 0px 0px 0px 1px ${themeVars.color.borderColor}`,
   forcedColorAdjust: 'none',
   height: '10px',
   borderRadius: '5px',
@@ -27,7 +27,7 @@ globalStyle(`${progressBarClassName} .bar`, {
 })
 
 globalStyle(`${progressBarClassName} .fill`, {
-  background: semanticVars.color.highlightBackground,
+  background: themeVars.color.highlightBackground,
   height: '100%'
 })
 

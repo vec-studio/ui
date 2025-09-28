@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 import { tooltipClassName } from './tooltip.css'
 
 export const overlayArrowClassName = style({})
@@ -18,5 +18,5 @@ globalStyle(`${tooltipClassName}[data-placement=left] ${overlayArrowClassName} s
 
 globalStyle(`${tooltipClassName} ${overlayArrowClassName} svg`, {
   display: 'block',
-  fill: semanticVars.color.highlightBackground
+  fill: themeVars.color.highlightBackground
 })

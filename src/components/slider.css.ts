@@ -1,12 +1,12 @@
 import { style } from '@vanilla-extract/css'
-import { semanticVars } from '../theme'
+import { themeVars } from '../theme'
 
 export const sliderClassName = style({
   display: 'grid',
   gridTemplateAreas: `"label output" "track track"`,
   gridTemplateColumns: '1fr auto',
   maxWidth: '300px',
-  color: semanticVars.color.textColor,
+  color: themeVars.color.textColor,
 
   selectors: {
     '&[data-orientation=horizontal]': {
