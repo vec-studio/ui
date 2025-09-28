@@ -12,6 +12,10 @@
       "types": "./dist/types/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
+    },
+    "./index.css": {
+      "require": "./dist/index.css",
+      "import": "./dist/index.css"
     }
   },
   "scripts": {

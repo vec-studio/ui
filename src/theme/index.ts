@@ -1,5 +1,6 @@
 export * from './contract.css'
 export * from './dark.css'
 export * from './light.css'
+export * from './provider'
 export * from './semantic.css'
 export * from './token.css'
