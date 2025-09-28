@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "files": [
-    "./dist"
+    "./dist",
+    "./src"
   ],
   "exports": {
     ".": {
@@ -16,6 +17,9 @@
     "./index.css": {
       "require": "./dist/index.css",
       "import": "./dist/index.css"
+    },
+    "./src": {
+      "import": "./src/index.ts"
     }
   },
   "scripts": {
