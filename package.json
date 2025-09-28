@@ -26,7 +26,7 @@
     "prepack": "vite build",
     "prepare": "husky"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@vanilla-extract/dynamic": "2.1.5",
     "@vanilla-extract/recipes": "0.5.7",
     "clsx": "2.1.1",
@@ -51,5 +51,9 @@
     "vite": "7.1.7",
     "vite-plugin-dts": "4.5.4",
     "vite-plugin-externalize-deps": "0.9.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
   }
 }
