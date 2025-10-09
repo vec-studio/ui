@@ -1,8 +1,10 @@
 import { createTheme } from '@vanilla-extract/css'
 import openProps from 'open-props'
 import { themeVars } from './contract.css'
+import { tokens } from './tokens'
 
 export const themeDarkClassName = createTheme(themeVars, {
+  ...tokens,
   color: {
     borderColor: openProps.gray3,
     borderColorDisabled: openProps.gray1,

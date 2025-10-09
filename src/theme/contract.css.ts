@@ -28,5 +28,36 @@ export const themeVars = createThemeContract({
     textColorDisabled: null,
     textColorHover: null,
     textColorPlaceholder: null
+  },
+  font: {
+    body: null
+  },
+  fontSize: {
+    sm: null,
+    md: null,
+    lg: null,
+    xl: null
+  },
+  fontWeight: {
+    md: null,
+    lg: null
+  },
+  space: {
+    none: null,
+    xs: null,
+    sm: null,
+    md: null,
+    lg: null,
+    xl: null
+  },
+  borderRadius: {
+    none: null,
+    round: null,
+    xxs: null,
+    xs: null,
+    md: null,
+    lg: null,
+    xl: null,
+    xxl: null
   }
 })
