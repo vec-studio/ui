@@ -33,12 +33,14 @@ export const themeVars = createThemeContract({
     body: null
   },
   fontSize: {
+    xs: null,
     sm: null,
     md: null,
     lg: null,
     xl: null
   },
   fontWeight: {
+    sm: null,
     md: null,
     lg: null
   },
