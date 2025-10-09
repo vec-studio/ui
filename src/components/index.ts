@@ -1,6 +1,5 @@
 export * from './autocomplete'
 export * from './autocomplete.css'
-export * from './box'
 export * from './breadcrumb'
 export * from './breadcrumb.css'
 export * from './breadcrumbs'
