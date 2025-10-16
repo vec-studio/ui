@@ -15,8 +15,6 @@ export default defineConfig({
       fileName: 'index',
       cssFileName: 'index'
     },
-    cssMinify: false,
-    minify: false,
-    sourcemap: false
+    sourcemap: true
   }
 })

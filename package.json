@@ -17,9 +17,6 @@
     "./index.css": {
       "require": "./dist/index.css",
       "import": "./dist/index.css"
-    },
-    "./src": {
-      "import": "./src/index.ts"
     }
   },
   "scripts": {

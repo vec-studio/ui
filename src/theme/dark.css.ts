@@ -6,6 +6,9 @@ import { tokens } from './tokens'
 export const themeDarkClassName = createTheme(themeVars, {
   ...tokens,
   color: {
+    backgroundBase: openProps.gray2,
+    backgroundLayer1: openProps.gray1,
+    backgroundLayer2: openProps.gray0,
     borderColor: openProps.gray3,
     borderColorDisabled: openProps.gray1,
     borderColorHover: openProps.gray4,

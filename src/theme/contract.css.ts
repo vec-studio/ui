@@ -2,6 +2,9 @@ import { createThemeContract } from '@vanilla-extract/css'
 
 export const themeVars = createThemeContract({
   color: {
+    backgroundBase: null,
+    backgroundLayer1: null,
+    backgroundLayer2: null,
     borderColor: null,
     borderColorDisabled: null,
     borderColorHover: null,
@@ -43,23 +46,5 @@ export const themeVars = createThemeContract({
     sm: null,
     md: null,
     lg: null
-  },
-  space: {
-    none: null,
-    xs: null,
-    sm: null,
-    md: null,
-    lg: null,
-    xl: null
-  },
-  borderRadius: {
-    none: null,
-    round: null,
-    xxs: null,
-    xs: null,
-    md: null,
-    lg: null,
-    xl: null,
-    xxl: null
   }
 })
